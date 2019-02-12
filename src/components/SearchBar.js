@@ -1,7 +1,7 @@
 import React from 'react';
+import './SearchBar.css';
 
 class SearchBar extends React.Component {
-
     state = { term: '' };
 
     onInputChange = (event) => {
@@ -17,16 +17,33 @@ class SearchBar extends React.Component {
     render(){
         return (
             <div className='search-bar ui segment'>
-                <form onSubmit={this.onFormSubmit} className='ui form'>
-                    <div className='field'>
-                        <label>Video Search</label>
-                        <input 
-                            type='text'
-                            value={this.state.term}
-                            onChange={this.onInputChange}    
-                        />
+                <div className='ui grid'>
+                    <div className='three column row'>
+                        <div className='five wide column'>
+                            <i className='large red youtube icon'/>
+                            YouTube Copy
+                        </div>
+                        
+                        <div className='six wide column'>
+                            <form onSubmit={this.onFormSubmit} className='ui form'>
+                                <div className='ui fluid input'>
+                                    <input 
+                                        type='text'
+                                        value={this.state.term}
+                                        onChange={this.onInputChange}   
+                                        placeholder='Search' 
+                                    />
+                                    <button className='ui button'><i className='search icon' /></button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div className='five wide column rightAlign'>
+                            <i className='large grey bell icon'/>
+                            <i className='large grey circular user icon'/>
+                        </div>
                     </div>
-                </form>
+                </div>  
             </div>
         )
     }
