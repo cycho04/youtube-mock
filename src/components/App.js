@@ -23,7 +23,9 @@ class App extends React.Component {
                 q: term
             }
         });
-        this.setState({ videos: response.data.items, selectedVideo: response.data.items[0] });
+        //loops through list of videos and checks to see if it is a channel. (video doesnt play if its a channelvideo)
+        const checkIfChannel = response.data.items.find(video => !video.id.channelId);
+        this.setState({ videos: response.data.items, selectedVideo: checkIfChannel });
     };
 
     onVideoSelect = (video) => {
@@ -48,8 +50,6 @@ class App extends React.Component {
                         </div>    
                     </div>    
                 </div>
-                    
-                   
             </div>
             
         )

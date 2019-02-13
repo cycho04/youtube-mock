@@ -6,7 +6,6 @@ const VideoDetail = (props) => {
     }
 
     const videoSrc = `http://www.youtube.com/embed/${props.video.id.videoId}`
-    console.log(props.video)
     return (
         <div>
             <div className='ui embed'>
