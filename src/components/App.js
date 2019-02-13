@@ -4,6 +4,7 @@ import youtube from '../apis/youtube';
 import SearchBar from './SearchBar';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
+import Ad from './Ad';
 
 class App extends React.Component {
     state = { 
@@ -33,18 +34,22 @@ class App extends React.Component {
         return (
             <div>
                 <SearchBar onTermSubmit={this.onTermSubmit} />
-                <div className='ui container'>
+                <div className='ui fluid container'>
                     <div className='ui grid'>
                         <div className='ui row'>
-                            <div className='eleven wide column'>
+                            <div className='one wide column'></div>
+                            <div className='ten wide column'>
                                 <VideoDetail video={this.state.selectedVideo} />
                             </div>
-                            <div className='five wide column'>
+                            <div className='four wide column'>
+                                <Ad />
                                 <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
                             </div>
                         </div>    
-                    </div>
-                </div>    
+                    </div>    
+                </div>
+                    
+                   
             </div>
             
         )
