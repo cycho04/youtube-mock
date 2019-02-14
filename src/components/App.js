@@ -9,7 +9,9 @@ import Ad from './Ad';
 class App extends React.Component {
     state = { 
         videos: [],
-        selectedVideo: null
+        selectedVideo: null,
+        videoID: 'V9x86Ind880',
+        comments: []
     }; //needs to be array so we can get the length w/o error
 
     componentDidMount() {
@@ -23,9 +25,14 @@ class App extends React.Component {
                 q: term
             }
         });
+        const response2 = await youtube.get('/commentThreads', {
+            params:{
+                videoId: this.state.videoID
+            }
+        });
         //loops through list of videos and checks to see if it is a channel. (video doesnt play if its a channelvideo)
         const checkIfChannel = response.data.items.find(video => !video.id.channelId);
-        this.setState({ videos: response.data.items, selectedVideo: checkIfChannel });
+        this.setState({ videos: response.data.items, selectedVideo: checkIfChannel, videoID: checkIfChannel.id.videoId, comments: response2.data.items });
     };
 
     onVideoSelect = (video) => {
@@ -41,7 +48,7 @@ class App extends React.Component {
                         <div className='ui row'>
                             <div className='one wide column'></div>
                             <div className='ten wide column'>
-                                <VideoDetail video={this.state.selectedVideo} />
+                                <VideoDetail video={this.state.selectedVideo} comments={this.state.comments}/>
                             </div>
                             <div className='four wide column'>
                                 <Ad />

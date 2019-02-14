@@ -1,4 +1,5 @@
 import React from 'react';
+import Comments from './Comments';
 
 const VideoDetail = (props) => {
     if(!props.video){
@@ -15,6 +16,7 @@ const VideoDetail = (props) => {
                 <h4>{props.video.snippet.title}</h4>
                 <p>{props.video.snippet.description}</p>
             </div>
+            <Comments comments={props.comments}/>
         </div>
     )
 }
