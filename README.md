@@ -13,5 +13,5 @@
 - Queues up to 10 videos, based on the searched term.
 
 ### Video WalkThrough
-
+![Test Gif](test.gif)
 
