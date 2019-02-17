@@ -5,8 +5,8 @@ const VideoDetail = (props) => {
     if(!props.video){
         return <div>Loading...</div>;
     }
-
-    const videoSrc = `http://www.youtube.com/embed/${props.video.id.videoId}`
+    console.log(props.video)
+    const videoSrc = `https://www.youtube.com/embed/${props.video.id.videoId}`
     return (
         <div>
             <div className='ui embed'>
