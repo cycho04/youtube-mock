@@ -27,11 +27,11 @@ class App extends React.Component {
         });
         const response2 = await youtube.get('/commentThreads', {
             params:{
-                videoId: this.state.videoID
+                videoId: this.state.selectedVideo ? this.state.selectedVideo.id.videoId : this.state.videoID
             }
         });
         //loops through list of videos and checks to see if it is a channel. (video doesnt play if its a channelvideo)
-        const checkIfChannel = response.data.items.find(video => !video.id.channelId);
+        const checkIfChannel = response.data.items.find(video => !video.id.channelId); 
         this.setState({ videos: response.data.items, selectedVideo: checkIfChannel, videoID: checkIfChannel.id.videoId, comments: response2.data.items });
     };
 
@@ -58,7 +58,6 @@ class App extends React.Component {
                     </div>    
                 </div>
             </div>
-            
         )
     }
 }

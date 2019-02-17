@@ -21,6 +21,11 @@ const Comments = props => {
                                 <div className='text'>
                                     {comment.snippet.topLevelComment.snippet.textOriginal}
                                 </div>
+                                <div className='actions'>
+                                    <div>
+                                        <i className='thumbs grey up icon'/> {comment.snippet.topLevelComment.snippet.likeCount ? comment.snippet.topLevelComment.snippet.likeCount : ''} <i className='thumbs grey down icon'/> REPLY
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     )
