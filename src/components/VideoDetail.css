@@ -1,0 +1,11 @@
+.videoDetail {
+    border: none !important;
+    padding-left: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+/* Used to format the description section*/
+p{
+    white-space: pre-line;
+}

@@ -1,23 +1,25 @@
 import React from 'react';
-import faker from 'faker';
+import './Comments.css';
 
 const Comments = props => {
-    console.log(props.comments)
     return(
-        <div className='ui segment'>
-            <h4>Comments</h4>
+        <div className='ui segment comments'>
             <div className='ui comments'>
                 {props.comments.map((comment) => {
                     return(
-                        <div className='comment'>
-                            <a className='avatar'>
-                                <img src={faker.image.avatar()}/>
-                            </a>
+                        <div key={comment.id} className='comment'>
+                            <div className='avatar'>
+                                <img src={comment.snippet.topLevelComment.snippet.authorProfileImageUrl} alt={comment.snippet.topLevelComment.snippet.authorDisplayName} />
+                            </div>
                             <div className='content'>
-                                <a className='author'>{comment.snippet.topLevelComment.snippet.authorDisplayName}</a>
-                                <div className='metadata'>
-                                    <div className='date'>{comment.snippet.topLevelComment.snippet.publishedAt}</div>
-                                </div>
+                                <div className='author'>
+                                    {comment.snippet.topLevelComment.snippet.authorDisplayName}
+                                    <span className='metadata'>
+                                        <span className='date'>
+                                            {comment.snippet.topLevelComment.snippet.publishedAt}
+                                        </span>
+                                    </span>
+                                </div> 
                                 <div className='text'>
                                     {comment.snippet.topLevelComment.snippet.textOriginal}
                                 </div>
@@ -25,13 +27,13 @@ const Comments = props => {
                                     <div>
                                         <i className='thumbs grey up icon'/> {comment.snippet.topLevelComment.snippet.likeCount ? comment.snippet.topLevelComment.snippet.likeCount : ''} <i className='thumbs grey down icon'/> REPLY
                                     </div>
+                                    <div>{comment.replies ? `View ${comment.replies.comments.length} replies` : ''}{comment.replies ? <i className='angle down icon'/> : ''}</div>
                                 </div>
                             </div>
                         </div>
                     )
                 })}    
-            </div>
-            
+            </div>   
         </div>
     );
 }
