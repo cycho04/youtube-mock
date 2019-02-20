@@ -1,6 +1,24 @@
-.comments {
+.commentss {
     border: none !important;
     padding-left: 0 !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
+}
+
+.comments {
+    max-width: none !important;
+}
+
+.bottomSpacing {
+    margin-bottom: 1.5em !important;
+    width: 100% !important;
+    
+}
+
+.text {
+    white-space: pre-line !important;
+}
+
+.spacing {
+    margin-bottom: 0.5em;
 }

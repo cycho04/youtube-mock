@@ -3,11 +3,11 @@ import './Comments.css';
 
 const Comments = props => {
     return(
-        <div className='ui segment comments'>
+        <div className='ui segment commentss'>
             <div className='ui comments'>
                 {props.comments.map((comment) => {
                     return(
-                        <div key={comment.id} className='comment'>
+                        <div key={comment.id} className='comment bottomSpacing'>
                             <div className='avatar'>
                                 <img src={comment.snippet.topLevelComment.snippet.authorProfileImageUrl} alt={comment.snippet.topLevelComment.snippet.authorDisplayName} />
                             </div>
@@ -24,7 +24,7 @@ const Comments = props => {
                                     {comment.snippet.topLevelComment.snippet.textOriginal}
                                 </div>
                                 <div className='actions'>
-                                    <div>
+                                    <div className='spacing'>
                                         <i className='thumbs grey up icon'/> {comment.snippet.topLevelComment.snippet.likeCount ? comment.snippet.topLevelComment.snippet.likeCount : ''} <i className='thumbs grey down icon'/> REPLY
                                     </div>
                                     <div>{comment.replies ? `View ${comment.replies.comments.length} replies` : ''}{comment.replies ? <i className='angle down icon'/> : ''}</div>

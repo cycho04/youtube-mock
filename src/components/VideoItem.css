@@ -1,4 +1,19 @@
-
 .video-item.item img {
     max-width: 180px;
+}
+
+/*helps .header and .content not wrap.also removes default top border*/
+.overflow {
+    white-space: nowrap !important; 
+    border: none !important;
+}
+/*makes div fit each video item's width. else ellipsis occurs earlier*/
+.fillOuterContainer {
+    width: 100% !important;
+}
+
+.title {
+    width: 60% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }

@@ -20,6 +20,8 @@ class SearchBar extends React.Component {
                 <div className='ui grid'>
                     <div className='three column row'>
                         <div className='five wide column'>
+                            <i className='large grey bars icon'/>
+
                             <i className='large red youtube icon'/>
                             YouTube Copy
                         </div>
@@ -39,6 +41,9 @@ class SearchBar extends React.Component {
                         </div>
 
                         <div className='five wide column rightAlign'>
+                            <i className='large grey video icon'/>
+                            <i className='grey th icon large'/>
+                            <i className='large grey envelope outline icon'/>
                             <i className='large grey bell icon'/>
                             <i className='large grey circular user icon'/>
                         </div>
@@ -50,3 +55,5 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar;
+
+                
