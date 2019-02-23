@@ -17,8 +17,17 @@
 
 .text {
     white-space: pre-line !important;
+    display: -webkit-box-flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 3 !important;
 }
 
 .spacing {
     margin-bottom: 0.5em;
+}
+
+.clamp-lines__button {
+    background: none;
+    border: none;
+    font-weight: bold !important;
 }

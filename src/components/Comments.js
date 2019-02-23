@@ -1,11 +1,17 @@
 import React from 'react';
 import './Comments.css';
+import ClampLines from 'react-clamp-lines';
+
 
 const Comments = props => {
     return(
         <div className='ui segment commentss'>
             <div className='ui comments'>
                 {props.comments.map((comment) => {
+                    //formatting dates
+                    const date = new Date(comment.snippet.topLevelComment.snippet.publishedAt)
+                    const fullFormattedDate = props.getStringMonth(date.getMonth()) + ' ' + date.getDate() + ', ' + date.getFullYear();
+
                     return(
                         <div key={comment.id} className='comment bottomSpacing'>
                             <div className='avatar'>
@@ -16,12 +22,17 @@ const Comments = props => {
                                     {comment.snippet.topLevelComment.snippet.authorDisplayName}
                                     <span className='metadata'>
                                         <span className='date'>
-                                            {comment.snippet.topLevelComment.snippet.publishedAt}
+                                            {fullFormattedDate}
                                         </span>
                                     </span>
                                 </div> 
                                 <div className='text'>
-                                    {comment.snippet.topLevelComment.snippet.textOriginal}
+                                    <ClampLines
+                                        text={comment.snippet.topLevelComment.snippet.textOriginal}  
+                                        lines='4'
+                                        ellipsis='...'
+                                        className='clamptest'
+                                    />
                                 </div>
                                 <div className='actions'>
                                     <div className='spacing'>
