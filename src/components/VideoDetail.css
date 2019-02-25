@@ -57,4 +57,5 @@ h3 span {
     border: none;
     color: gray !important;
     padding-left: 0 !important;
+    cursor: pointer !important;
 }

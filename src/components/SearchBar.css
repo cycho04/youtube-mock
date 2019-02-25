@@ -1,3 +1,15 @@
 .rightAlign {
     text-align: right;
 }
+
+
+/* used to vertically center */
+.logoSide {
+    position: relative;
+}
+.inside {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 900 !important;
+}

@@ -3,10 +3,12 @@ import './VideoList.css';
 
 import VideoItem from './VideoItem';
 
+
 const VideoList = props => {
+    
     const renderedList = props.videos.map((video, index) => {
         //added a ternary operator into key= when a channel video is in the list, it doesnt have a videoId, but a channelId. looks for either or, depending on which is present.
-        return <VideoItem key={video.id.videoId ? video.id.videoId : video.id.channelId } onVideoSelect={props.onVideoSelect} video={video} order={index}/>;
+        return <VideoItem key={video.id.videoId ? video.id.videoId : video.id.channelId } onVideoSelect={props.onVideoSelect} video={video} order={index} viewCounts={props.viewCounts}/>;
     })
 
     return (

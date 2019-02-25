@@ -12,11 +12,14 @@ class App extends React.Component {
         videos: [],
         selectedVideo: null,
         videoDetails: [],
-        comments: []
+        comments: [],
+        viewCounts: [],
+        subscriberCount: 0
     }; //needs to be array so we can get the length w/o error
 
     componentDidMount() {
         this.onTermSubmit('buildings');
+
     }
 
 
@@ -42,7 +45,41 @@ class App extends React.Component {
                 part: 'snippet,statistics'
             }
         });
-        this.setState({ videos: response.data.items, selectedVideo: checkIfChannel, comments: response2.data.items, videoDetails: response3.data.items[0] });
+        
+
+        let viewCountsString = ''
+
+        response.data.items.map((video, i) => {
+            if(i === 0){
+                return viewCountsString = video.id.videoId
+            }
+            return viewCountsString = viewCountsString .concat(',', video.id.videoId);
+        })
+
+        const response4 = await youtube.get('/videos', {
+            params:{
+                id: viewCountsString,
+                part: 'statistics'
+            }
+        });
+
+        const response5 = await youtube.get('/channels', {
+            params:{
+                id: checkIfChannel.snippet.channelId,
+                part: 'statistics'
+            }
+        });
+
+
+        this.setState({ 
+            videos: response.data.items, 
+            selectedVideo: checkIfChannel, 
+            comments: response2.data.items, 
+            videoDetails: response3.data.items[0], 
+            viewCounts: response4.data.items,
+            subscriberCount: response5.data.items[0].statistics.subscriberCount
+        });
+
     };
 
     onVideoSelect = async (video) => {
@@ -59,7 +96,14 @@ class App extends React.Component {
                 part: 'snippet,statistics'
             }
         });
-        this.setState({ selectedVideo: video , comments: response2.data.items, videoDetails: response3.data.items[0] });
+        const response4 = await youtube.get('/channels', {
+            params:{
+                id: video.snippet.channelId,
+                part: 'statistics'
+            }
+        });
+        
+        this.setState({ selectedVideo: video , comments: response2.data.items, videoDetails: response3.data.items[0], subscriberCount: response4.data.items[0].statistics.subscriberCount});    
     }
 
     render(){
@@ -71,11 +115,11 @@ class App extends React.Component {
                         <div className='ui row'>
                             <div className='one wide column'></div>
                             <div className='ten wide column'>
-                                <VideoDetail video={this.state.selectedVideo} comments={this.state.comments} videoDetails={this.state.videoDetails}/>
+                                <VideoDetail video={this.state.selectedVideo} comments={this.state.comments} videoDetails={this.state.videoDetails} subscriberCount={this.state.subscriberCount}/>
                             </div>
                             <div className='four wide column'>
                                 <Ad />
-                                <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
+                                <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} videoDetails={this.state.videoDetails} viewCounts={this.state.viewCounts}/>
                             </div>
                         </div>    
                     </div>    

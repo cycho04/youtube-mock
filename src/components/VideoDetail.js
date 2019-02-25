@@ -92,7 +92,7 @@ const VideoDetail = (props) => {
                         </div> 
                     </div>
                     
-                    <div className='column moveButton'><button className='ui red button'>SUBSCRIBE ???K</button></div>
+                    <div className='column moveButton'><button className='ui red button'>SUBSCRIBE {props.subscriberCount}</button></div>
                 </div>
                 
                     
