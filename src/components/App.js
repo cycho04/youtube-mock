@@ -46,15 +46,21 @@ class App extends React.Component {
             }
         });
         
-
+        //error checking for fetch viewCounts if a channel is searched.
         let viewCountsString = ''
-
         response.data.items.map((video, i) => {
-            if(i === 0){
+            //skips over item if channel
+            if(video.id.channelId){
+                return true;
+            }
+            //first item doesn't need to be added with ,
+            else if(viewCountsString === ''){
                 return viewCountsString = video.id.videoId
             }
+            //all else is added with , format
             return viewCountsString = viewCountsString .concat(',', video.id.videoId);
         })
+
 
         const response4 = await youtube.get('/videos', {
             params:{
@@ -102,7 +108,7 @@ class App extends React.Component {
                 part: 'statistics'
             }
         });
-        
+        console.log(response3)
         this.setState({ selectedVideo: video , comments: response2.data.items, videoDetails: response3.data.items[0], subscriberCount: response4.data.items[0].statistics.subscriberCount});    
     }
 
