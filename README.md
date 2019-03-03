@@ -4,7 +4,7 @@
 
 - Live Demo: [YouTube Copy](https://my-youtube-mock.herokuapp.com/)
 
-### User Options
+### User Interface
 
 - Search for real Youtube videos and be able to play them.
 
