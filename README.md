@@ -14,7 +14,7 @@
 
 
 ### Video WalkThrough
-![Test Gif](test.gif)
+![Test Gif](youtube.gif)
 
 
 ### Technical Information
