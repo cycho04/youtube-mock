@@ -24,3 +24,5 @@
 - HTTP requests made possible with `axios`
 
 - Bootstrapped with `create-react-app`
+
+- Streaming made with `iframe` and `embedded player`
