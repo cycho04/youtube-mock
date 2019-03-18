@@ -79,15 +79,16 @@ const VideoDetail = (props) => {
                             <div className='content'>
                                 <div className='summary'>{props.videoDetails.snippet.channelTitle}</div>
                                 <div className='meta'>{`Published on ${fullFormattedDate}`}</div>
-                                <div className='extra text test'>
+                                <div className='extra text'>
                                     <ClampLines
                                         text={props.videoDetails.snippet.description}
                                         lines='3'
                                         ellipsis='...'
                                         moreText='SHOW MORE'
                                         lessText='SHOW LESS'
+                                        className='clamp'
                                     />
-                                    </div>
+                                </div>
                             </div>
                         </div> 
                     </div>

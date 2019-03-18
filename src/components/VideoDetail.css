@@ -7,11 +7,6 @@
     -webkit-box-shadow: none !important;
 }
 
-/* Used to format the description section*/
-.test {
-    white-space: pre-line;
-    text-overflow: ellipsis !important;
-}
 
 .cutLeftPadding {
     padding-left: 0 !important;
