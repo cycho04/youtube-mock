@@ -18,7 +18,7 @@ class App extends React.Component {
     }; //needs to be array so we can get the length w/o error
 
     componentDidMount() {
-        this.onTermSubmit('buildings');
+        this.onTermSubmit('Breaking Bad');
 
     }
 

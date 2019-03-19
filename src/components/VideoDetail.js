@@ -82,7 +82,7 @@ const VideoDetail = (props) => {
                                 <div className='extra text'>
                                     <ClampLines
                                         text={props.videoDetails.snippet.description}
-                                        lines='3'
+                                        lines="3"
                                         ellipsis='...'
                                         moreText='SHOW MORE'
                                         lessText='SHOW LESS'

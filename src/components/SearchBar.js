@@ -2,7 +2,15 @@ import React from 'react';
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
-    state = { term: '' };
+    state = { 
+        term: '',
+        leftIcon: true,
+        videoIcon: true,
+        appIcon: true,
+        messageIcon: true,
+        bellIcon: true,
+        loginIcon: true,
+     };
 
     onInputChange = (event) => {
         this.setState({ term: event.target.value });
@@ -14,6 +22,25 @@ class SearchBar extends React.Component {
         this.props.onTermSubmit(this.state.term);
     }
 
+    handleLeftIconClick = () => {
+        this.setState({ leftIcon: !this.state.leftIcon })
+    }
+    handleVideoIconClick = () => {
+        this.setState({ videoIcon: !this.state.videoIcon })
+    }
+    handleAppIconClick = () => {
+        this.setState({ appIcon: !this.state.appIcon })
+    }
+    handleMessageIconClick = () => {
+        this.setState({ messageIcon: !this.state.messageIcon })
+    }
+    handleBellIconClick = () => {
+        this.setState({ bellIcon: !this.state.bellIcon })
+    }
+    handleLoginIconClick = () => {
+        this.setState({ loginIcon: !this.state.loginIcon })
+    }
+
     render(){
         return (
             <div className='search-bar ui segment'>
@@ -21,14 +48,15 @@ class SearchBar extends React.Component {
                     <div className='three column row'>
                         <div className='five wide column logoSide'>
                             <div className='inside'>
-                                <i className='large grey bars icon'/>
+                                <i onClick={this.handleLeftIconClick} className={`large ${this.state.leftIcon ? 'grey' : 'red'} bars icon`} />
                                 &thinsp;
                                 &thinsp;
                                 &thinsp;
-                                <i className='large red youtube icon'/>
-                                YouTube Copy    
+                                <span onClick={this.handleIconClick}>
+                                    <i className='large red youtube icon'/>
+                                    YouTube Copy      
+                                </span>
                             </div>
-                            
                         </div>
                         
                         <div className='six wide column'>
@@ -46,11 +74,11 @@ class SearchBar extends React.Component {
                         </div>
 
                         <div className='five wide column rightAlign'>
-                            <i className='large grey video icon'/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i className='grey th icon large'/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i className='large grey envelope outline icon'/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i className='large grey bell icon'/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i className='large inverted grey circular user icon'/>
+                            <i onClick={this.handleVideoIconClick} className={`large ${this.state.videoIcon ? 'grey' : 'blue'} video icon`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i onClick={this.handleAppIconClick} className={`${this.state.appIcon ? 'grey' : 'green'} th icon large`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i onClick={this.handleMessageIconClick} className={`large ${this.state.messageIcon ? 'grey' : 'pink'} envelope outline icon`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i onClick={this.handleBellIconClick} className={`large ${this.state.bellIcon ? 'grey' : 'yellow'} bell icon`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i onClick={this.handleLoginIconClick} className={`large inverted ${this.state.loginIcon ? 'grey' : 'purple'} circular user icon`}/>
                         </div>
                     </div>
                 </div>  
