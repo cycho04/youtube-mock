@@ -116,20 +116,18 @@ class App extends React.Component {
         return (
             <div className='globalFont'>
                 <SearchBar onTermSubmit={this.onTermSubmit} />
-                <div className='ui fluid container'>
-                    <div className='ui grid'>
+                    <div className='ui stackable grid'>
                         <div className='ui row'>
-                            <div className='one wide column'></div>
-                            <div className='ten wide column'>
+                            <div className='one wide computer column'></div>
+                            <div className='ten wide computer column'>
                                 <VideoDetail video={this.state.selectedVideo} comments={this.state.comments} videoDetails={this.state.videoDetails} subscriberCount={this.state.subscriberCount}/>
                             </div>
-                            <div className='four wide column'>
+                            <div className='four wide computer column'>
                                 <Ad />
                                 <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} videoDetails={this.state.videoDetails} viewCounts={this.state.viewCounts}/>
                             </div>
                         </div>    
                     </div>    
-                </div>
             </div>
         )
     }
