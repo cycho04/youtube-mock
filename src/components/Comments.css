@@ -31,3 +31,10 @@
     border: none;
     font-weight: bold !important;
 }
+
+@media screen and (max-width: 75em){
+    .commentss{
+        display: none !important;
+    }   
+
+}

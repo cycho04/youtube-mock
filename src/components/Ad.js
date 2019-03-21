@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import './Ad.css';
 
 const Ad = () => {
     return (

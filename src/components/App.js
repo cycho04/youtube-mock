@@ -116,10 +116,10 @@ class App extends React.Component {
         return (
             <div className='globalFont'>
                 <SearchBar onTermSubmit={this.onTermSubmit} />
-                    <div className='ui stackable grid'>
+                    <div className='ui grid'>
                         <div className='ui row'>
-                            <div className='one wide computer column'></div>
-                            <div className='ten wide computer column'>
+                            <div className='one wide column'></div>
+                            <div className='ten wide column fullscreen'>
                                 <VideoDetail video={this.state.selectedVideo} comments={this.state.comments} videoDetails={this.state.videoDetails} subscriberCount={this.state.subscriberCount}/>
                             </div>
                             <div className='four wide computer column'>
