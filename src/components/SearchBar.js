@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 
-class SearchBar extends React.Component {
+export default class SearchBar extends React.Component {
     state = { 
         term: '',
         leftIcon: true,
@@ -18,7 +18,6 @@ class SearchBar extends React.Component {
 
     onFormSubmit = (event) => {
         event.preventDefault();
-
         this.props.onTermSubmit(this.state.term);
     }
 
@@ -54,7 +53,7 @@ class SearchBar extends React.Component {
                                 &thinsp;
                                 <span onClick={this.handleIconClick}>
                                     <i className='large red youtube icon'/>
-                                    YouTube Copy      
+                                    <span>YouTube Copy</span>       
                                 </span>
                             </div>
                         </div>
@@ -74,19 +73,17 @@ class SearchBar extends React.Component {
                         </div>
 
                         <div className='five wide column rightAlign'>
-                            <i onClick={this.handleVideoIconClick} className={`large ${this.state.videoIcon ? 'grey' : 'blue'} video icon`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i onClick={this.handleAppIconClick} className={`${this.state.appIcon ? 'grey' : 'green'} th icon large`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i onClick={this.handleMessageIconClick} className={`large ${this.state.messageIcon ? 'grey' : 'pink'} envelope outline icon`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i onClick={this.handleBellIconClick} className={`large ${this.state.bellIcon ? 'grey' : 'yellow'} bell icon`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i onClick={this.handleLoginIconClick} className={`large inverted ${this.state.loginIcon ? 'grey' : 'purple'} circular user icon`}/>
+                            <i onClick={this.handleVideoIconClick} className={`large video icon ${this.state.videoIcon ? 'grey' : 'blue'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i onClick={this.handleAppIconClick} className={`large th icon ${this.state.appIcon ? 'grey' : 'green'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i onClick={this.handleMessageIconClick} className={`large envelope outline icon ${this.state.messageIcon ? 'grey' : 'pink'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i onClick={this.handleBellIconClick} className={`large bell icon ${this.state.bellIcon ? 'grey' : 'yellow'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i onClick={this.handleLoginIconClick} className={`large inverted circular user icon ${this.state.loginIcon ? 'grey' : 'purple'} `}/>
                         </div>
                     </div>
                 </div>  
             </div>
         )
-    }
-}
-
-export default SearchBar;
+    };
+};
 
                 

@@ -3,9 +3,9 @@ import Comments from './Comments';
 import './VideoDetail.css';
 import ClampLines from 'react-clamp-lines';
 
-const VideoDetail = (props) => {
+const VideoDetail = ({videoDetails, video, comments, subscriberCount}) => {
     //Format Date here
-    const date = new Date(props.videoDetails.snippet ? props.videoDetails.snippet.publishedAt : 0);
+    const date = new Date(videoDetails.snippet ? videoDetails.snippet.publishedAt : 0);
 
     const getStringMonth = number => {
         switch(number){
@@ -41,12 +41,12 @@ const VideoDetail = (props) => {
     const fullFormattedDate = getStringMonth(date.getMonth()) + ' ' + date.getDate() + ', ' + date.getFullYear();
 
     //Loading
-    if(!props.video){
+    if(!video){
         return <div>Loading...</div>;
     }
 
     //iframe
-    const videoSrc = `https://www.youtube.com/embed/${props.video.id.videoId}`
+    const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
 
     //render
     return (
@@ -58,13 +58,13 @@ const VideoDetail = (props) => {
                 <div className='ui secondary pointing menu'>
                     <div className='item cutLeftPadding'>
                         <div className='content'>
-                            <div className='header spacing'><h3>{props.video.snippet.title}</h3></div>
-                            <div className='meta'><h3>{Number(props.videoDetails.statistics.viewCount).toLocaleString()} views</h3></div>
+                            <div className='header spacing'><h3>{video.snippet.title}</h3></div>
+                            <div className='meta'><h3>{Number(videoDetails.statistics.viewCount).toLocaleString()} views</h3></div>
                         </div>
                     </div>
                     <div className='right menu'>
-                        <a className='active item' href='#'><i className='thumbs grey up icon'/>{props.videoDetails.statistics.likeCount.toLocaleString()}</a>
-                        <a className='item' href='#'><i className='thumbs grey down icon'/>{props.videoDetails.statistics.dislikeCount.toLocaleString()}</a>
+                        <a className='active item' href='#'><i className='thumbs grey up icon'/>{videoDetails.statistics.likeCount.toLocaleString()}</a>
+                        <a className='item' href='#'><i className='thumbs grey down icon'/>{videoDetails.statistics.dislikeCount.toLocaleString()}</a>
                         <a className='item' href='#'><i className='share grey icon'/>Share</a>
                         <a className='item' href='#'><i className='plus grey icon'/>Save</a>
                         <a className='item' href='#'><i className='ellipsis horizontal grey icon'/></a>
@@ -75,13 +75,13 @@ const VideoDetail = (props) => {
                 <div className='ui two column grid'>
                     <div className='ui feed column'>
                         <div className='ui event'>
-                            <div className='label'><img src={props.videoDetails.snippet.thumbnails.default.url} alt='Channel Avatar'/></div>
+                            <div className='label'><img src={videoDetails.snippet.thumbnails.default.url} alt='Channel Avatar'/></div>
                             <div className='content'>
-                                <div className='summary'>{props.videoDetails.snippet.channelTitle}</div>
+                                <div className='summary'>{videoDetails.snippet.channelTitle}</div>
                                 <div className='meta'>{`Published on ${fullFormattedDate}`}</div>
                                 <div className='extra text'>
                                     <ClampLines
-                                        text={props.videoDetails.snippet.description}
+                                        text={videoDetails.snippet.description}
                                         lines="3"
                                         ellipsis='...'
                                         moreText='SHOW MORE'
@@ -93,7 +93,7 @@ const VideoDetail = (props) => {
                         </div> 
                     </div>
                     
-                    <div className='column moveButton'><button className='ui red button'>SUBSCRIBE {props.subscriberCount}</button></div>
+                    <div className='column moveButton'><button className='ui red button'>SUBSCRIBE {subscriberCount}</button></div>
                 </div>
                 
                     
@@ -101,9 +101,9 @@ const VideoDetail = (props) => {
                     
                 
                 <div className='ui divider font'></div>
-                <h3>{Number(props.videoDetails.statistics.commentCount).toLocaleString()} Comments &thinsp; &thinsp; &thinsp; &thinsp; <span><i className='sort amount up icon'/>SORT BY</span></h3>
+                <h3>{Number(videoDetails.statistics.commentCount).toLocaleString()} Comments &thinsp; &thinsp; &thinsp; &thinsp; <span><i className='sort amount up icon'/>SORT BY</span></h3>
             </div>
-            <Comments comments={props.comments} getStringMonth={getStringMonth} />
+            <Comments comments={comments} getStringMonth={getStringMonth} />
         </div>
     )
 }

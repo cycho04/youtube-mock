@@ -1,7 +1,5 @@
-
 @media screen and (max-width: 75em){
     .banner{
         display: none !important;
     }   
-
 }
