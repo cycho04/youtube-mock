@@ -17,7 +17,7 @@
 ![Test Gif](youtube.gif)
 
 
-### Technical Information
+### Environment
 
 - Powered by the `YouTube Data API`
 
