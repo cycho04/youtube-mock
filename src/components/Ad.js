@@ -1,9 +1,9 @@
 import React from 'react';
-import faker from 'faker';
+import faker from 'faker'; //random image generator
 
 import './styles/Ad.css';
 
-//Uses faker API to pull random image for "banner ad"
+
 const Ad = () => {
     return (
         <div className='ui banner ad'>

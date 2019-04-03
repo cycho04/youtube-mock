@@ -42,7 +42,11 @@ const VideoDetail = ({videoDetails, video, comments, subscriberCount}) => {
 
     //Loading
     if(!video){
-        return <div>Loading...</div>;
+        return (
+            <div className="ui active inverted dimmer">
+                <div className="ui text loader">Loading</div>
+            </div>  
+        )
     }
 
     //iframe
@@ -95,8 +99,6 @@ const VideoDetail = ({videoDetails, video, comments, subscriberCount}) => {
                     
                     <div className='column moveButton'><button className='ui red button'>SUBSCRIBE {subscriberCount}</button></div>
                 </div>
-                
-                    
                 
                     
                 

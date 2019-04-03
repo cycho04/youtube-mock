@@ -24,6 +24,7 @@ export default class App extends React.Component {
     };
 
     onSearchSubmit = async (searchTerm) => {
+
         const searchTermResponse = await youtube.get('/search', {
             params: {
                 part: 'snippet',
@@ -114,31 +115,36 @@ export default class App extends React.Component {
     };
 
     render(){
+        console.log(this.state)
         return (
             <div className='globalFont'>
                 <SearchBar onTermSubmit={this.onTermSubmit} />
-                    <div className='ui grid'>
-                        <div className='ui row'>
-                            <div className='one wide column'></div>
-                            <div className='ten wide column fullscreen'>
-                                <VideoDetail 
-                                    comments={this.state.comments}
-                                    video={this.state.selectedVideo}  
-                                    videoDetails={this.state.videoDetails} 
-                                    subscriberCount={this.state.subscriberCount}
-                                />
-                            </div>
-                            <div className='four wide computer column'>
-                                <Ad />
-                                <VideoList 
-                                    onVideoSelect={this.onVideoSelect} 
-                                    videos={this.state.videos} 
-                                    videoDetails={this.state.videoDetails} 
-                                    viewCounts={this.state.viewCounts}
-                                />
-                            </div>
-                        </div>    
+
+                <div className='ui stackable grid'>
+                    <div className='ui row'>
+                    
+                        <div className='ten wide column left-place-holder'>
+                            <VideoDetail 
+                                comments={this.state.comments}
+                                video={this.state.selectedVideo}  
+                                videoDetails={this.state.videoDetails} 
+                                subscriberCount={this.state.subscriberCount}
+                            />
+                        </div>
+
+                        <div className='four wide column'>
+                            <Ad />
+                            <VideoList 
+                                onVideoSelect={this.onVideoSelect} 
+                                videos={this.state.videos} 
+                                videoDetails={this.state.videoDetails} 
+                                viewCounts={this.state.viewCounts}
+                            />
+                        </div>
+
                     </div>    
+                </div>  
+                  
             </div>
         )
     };

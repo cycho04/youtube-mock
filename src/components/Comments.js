@@ -3,6 +3,7 @@ import ClampLines from 'react-clamp-lines';
 
 import './styles/Comments.css';
 
+
 const Comments = props => {
     return(
         <div className='ui segment commentss'>
@@ -32,7 +33,6 @@ const Comments = props => {
                                         text={data.textOriginal}  
                                         lines='4'
                                         ellipsis='...'
-                                        className='clamptest'
                                     />
                                 </div>
                                 <div className='actions'>
