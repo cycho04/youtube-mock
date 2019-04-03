@@ -1,5 +1,7 @@
 import React from 'react';
-import './VideoItem.css'
+
+import './styles/VideoItem.css'
+
 
 const VideoItem  = props => {
     const findViewCount = (currentId) => {

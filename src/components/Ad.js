@@ -1,7 +1,7 @@
 import React from 'react';
 import faker from 'faker';
 
-import './Ad.css';
+import './styles/Ad.css';
 
 //Uses faker API to pull random image for "banner ad"
 const Ad = () => {

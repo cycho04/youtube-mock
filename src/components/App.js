@@ -1,7 +1,7 @@
 import React from 'react';
 import youtube from '../apis/youtube';
 
-import './App.css';
+import './styles/App.css';
 import Ad from './Ad';
 import SearchBar from './SearchBar';
 import VideoDetail from './VideoDetail';
@@ -9,7 +9,7 @@ import VideoList from './VideoList';
 
 
 export default class App extends React.Component {
-    //short for constructor with super()
+
     state = { 
         videos: [],
         selectedVideo: null,
@@ -20,11 +20,10 @@ export default class App extends React.Component {
     };
 
     componentDidMount() {
-        this.onTermSubmit('Breaking Bad');
+        this.onSearchSubmit('Breaking Bad');
     };
 
-    onTermSubmit = async (searchTerm) => {
-
+    onSearchSubmit = async (searchTerm) => {
         const searchTermResponse = await youtube.get('/search', {
             params: {
                 part: 'snippet',

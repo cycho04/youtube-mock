@@ -1,6 +1,6 @@
 import React from 'react';
 import Comments from './Comments';
-import './VideoDetail.css';
+import './styles/VideoDetail.css';
 import ClampLines from 'react-clamp-lines';
 
 const VideoDetail = ({videoDetails, video, comments, subscriberCount}) => {

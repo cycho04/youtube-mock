@@ -1,7 +1,7 @@
 import React from 'react';
 import ClampLines from 'react-clamp-lines';
 
-import './Comments.css';
+import './styles/Comments.css';
 
 const Comments = props => {
     return(

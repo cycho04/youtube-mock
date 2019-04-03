@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './VideoList.css';
+import './styles/VideoList.css';
 import VideoItem from './VideoItem';
 
 
