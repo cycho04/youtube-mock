@@ -38,13 +38,13 @@ export default class App extends React.Component {
         const comments = await youtube.get('/commentThreads', {
             params:{
                 part: 'snippet,replies',
-                videoId: checkIfChannel.id.videoId ? checkIfChannel.id.videoId : 'V9x86Ind880',
+                videoId: checkIfChannel === undefined ? 'V9x86Ind880' : checkIfChannel.id.videoId, 
                 order: 'relevance'
             }
         });
         const response3 = await youtube.get('/videos', {
             params:{
-                id: checkIfChannel.id.videoId ? checkIfChannel.id.videoId : 'V9x86Ind880',
+                id: checkIfChannel === undefined ? 'V9x86Ind880' : checkIfChannel.id.videoId,
                 part: 'snippet,statistics'
             }
         });
@@ -61,7 +61,7 @@ export default class App extends React.Component {
                 return viewCountsString = video.id.videoId
             }
             //all else is added with , format
-            return viewCountsString = viewCountsString .concat(',', video.id.videoId);
+            return viewCountsString = viewCountsString === undefined ? '' : viewCountsString.concat(',', video.id.videoId)
         })
 
 
@@ -74,7 +74,7 @@ export default class App extends React.Component {
 
         const subscribeInfo = await youtube.get('/channels', {
             params:{
-                id: checkIfChannel.snippet.channelId,
+                id: checkIfChannel === undefined ? '' : checkIfChannel.snippet.channelId,
                 part: 'statistics'
             }
         });
@@ -86,7 +86,7 @@ export default class App extends React.Component {
             comments: comments.data.items, 
             videoDetails: response3.data.items[0], 
             viewCounts: viewCountResponse.data.items,
-            subscriberCount: subscribeInfo.data.items[0].statistics.subscriberCount
+            subscriberCount: subscribeInfo.data.items[0] === undefined ? '' : subscribeInfo.data.items[0].statistics.subscriberCount
         });
 
     };
@@ -118,7 +118,7 @@ export default class App extends React.Component {
         console.log(this.state)
         return (
             <div className='globalFont'>
-                <SearchBar onTermSubmit={this.onTermSubmit} />
+                <SearchBar onTermSubmit={this.onSearchSubmit} />
 
                 <div className='ui stackable grid'>
                     <div className='ui row'>
