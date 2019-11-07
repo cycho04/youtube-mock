@@ -54,7 +54,7 @@ export default class SearchBar extends React.Component {
                                 &thinsp;
                                 <span onClick={this.handleIconClick}>
                                     <i className='large red youtube icon'/>
-                                    <span>YouTube Copy</span>       
+                                    <span>HueTube</span>       
                                 </span>
                             </div>
                         </div>
