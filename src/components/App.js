@@ -6,9 +6,15 @@ import Ad from './Ad';
 import SearchBar from './SearchBar';
 import VideoDetail from './VideoDetail';
 import VideoList from './VideoList';
+import { connect } from "react-redux";
+import {
+    searchTerm,
+    getComments,
+    getVideoDetails,
+} from '../actions';
 
 
-export default class App extends React.Component {
+class App extends React.Component {
 
     state = { 
         videos: [],
@@ -21,6 +27,9 @@ export default class App extends React.Component {
 
     componentDidMount() {
         this.onSearchSubmit('Breaking Bad');
+        this.props.searchTerm('hello');
+        this.props.getComments('V9x86Ind880');
+        this.props.getVideoDetails('V9x86Ind880')
     };
 
     onSearchSubmit = async (searchTerm) => {
@@ -115,7 +124,6 @@ export default class App extends React.Component {
     };
 
     render(){
-        console.log(this.state)
         return (
             <div className='globalFont'>
                 <SearchBar onTermSubmit={this.onSearchSubmit} />
@@ -149,3 +157,5 @@ export default class App extends React.Component {
         )
     };
 };
+
+export default connect(null, {searchTerm, getComments, getVideoDetails})(App);
