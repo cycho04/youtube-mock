@@ -20,6 +20,7 @@ const VideoList = props => {
 
     return (
         <div className='ui relaxed divided list' >
+            {console.log(props.viewCounts)}
             <div>
                 Up next
                 <div className='ui fitted toggle checkbox right'>

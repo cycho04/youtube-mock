@@ -3,6 +3,9 @@ import {
     SEARCH_TERM,
     GET_COMMENTS,
     GET_DETAILS,
+    CURRENT_VIDEO,
+    CHANNEL_INFO,
+    VIEW_COUNTS,
 } from './types';
 
 export const searchTerm = (term) => async dispatch =>{
@@ -41,6 +44,53 @@ export const getVideoDetails = (id) => async dispatch =>{
     });
     dispatch({
         type: GET_DETAILS,
-        payload: videoDetails.data.items
+        payload: videoDetails.data.items[0]
+    })
+}
+
+export const selectCurrentVideo = (videos) => {
+    const selectedVideo = videos.find(video => !video.id.channelId);
+    return {
+        type: CURRENT_VIDEO,
+        payload: selectedVideo
+    }
+} 
+
+export const getChannelInfo = (id) => async dispatch =>{
+    const channelInfo = await youtube.get('/channels', {
+        params:{
+            id: id,
+            part: 'statistics'
+        }
+    });
+    dispatch({
+        type: CHANNEL_INFO,
+        payload: channelInfo.data.items[0]
+    })
+}
+
+export const getViewCountList = (videos) => async dispatch =>{
+    let viewCountsString = ''
+    videos.map((video, i) => {
+        //skips over item if channel
+        if(video.id.channelId){
+            return true;
+        }
+        //first item doesn't need to be added with ,
+        else if(viewCountsString === ''){
+            return viewCountsString = video.id.videoId
+        }
+        //all else is added with , format
+        return viewCountsString = viewCountsString === undefined ? '' : viewCountsString.concat(',', video.id.videoId)
+    })
+    const viewCountResponse = await youtube.get('/videos', {
+        params:{
+            id: viewCountsString,
+            part: 'statistics'
+        }
+    });
+    dispatch({
+        type: VIEW_COUNTS,
+        payload: viewCountResponse.data.items
     })
 }

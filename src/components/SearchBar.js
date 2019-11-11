@@ -1,7 +1,17 @@
 import React from 'react';
 import './styles/SearchBar.css';
+import { connect } from "react-redux";
+import {
+    searchTerm,
+    getComments,
+    getVideoDetails,
+    selectCurrentVideo,
+    getChannelInfo,
+    getViewCountList,
+} from '../actions';
 
-export default class SearchBar extends React.Component {
+
+class SearchBar extends React.Component {
     state = { 
         term: '',
         leftIcon: true,
@@ -10,16 +20,25 @@ export default class SearchBar extends React.Component {
         messageIcon: true,
         bellIcon: true,
         loginIcon: true,
-     };
+    };
+
+    onTermSubmit = term => {
+        this.props.searchTerm(term);
+        this.props.getComments('V9x86Ind880');
+        this.props.getVideoDetails('V9x86Ind880')
+        this.props.getChannelInfo("UCeiZcfuj0r1ggNl0N_DVOgQ")
+        this.props.getViewCountList(this.props.videos)
+        this.props.selectCurrentVideo(this.props.videos);
+    }
 
     onInputChange = (event) => {
         this.setState({ term: event.target.value });
     }
 
     onFormSubmit = (event) => {
-        console.log(this)
         event.preventDefault();
-        this.props.onTermSubmit(this.state.term);
+        console.log(this.state.term);
+        this.onTermSubmit(this.state.term);
     }
 
     handleLeftIconClick = () => {
@@ -87,4 +106,19 @@ export default class SearchBar extends React.Component {
     };
 };
 
-                
+const mapStateToProps = state => {
+    return{
+        videos: state.videos,
+    }
+}
+
+const mapDispatchToProps = {
+    searchTerm,
+    getComments,
+    getVideoDetails,
+    selectCurrentVideo,
+    getChannelInfo,
+    getViewCountList,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);            

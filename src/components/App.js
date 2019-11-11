@@ -11,6 +11,9 @@ import {
     searchTerm,
     getComments,
     getVideoDetails,
+    selectCurrentVideo,
+    getChannelInfo,
+    getViewCountList,
 } from '../actions';
 
 
@@ -22,82 +25,20 @@ class App extends React.Component {
         videoDetails: [],
         comments: [],
         viewCounts: [],
-        subscriberCount: 0
+        subscriberCount: 0,
     };
 
     componentDidMount() {
         this.onSearchSubmit('Breaking Bad');
-        this.props.searchTerm('hello');
-        this.props.getComments('V9x86Ind880');
-        this.props.getVideoDetails('V9x86Ind880')
     };
 
-    onSearchSubmit = async (searchTerm) => {
-
-        const searchTermResponse = await youtube.get('/search', {
-            params: {
-                part: 'snippet',
-                q: searchTerm
-            }
-        });
-
-        //loops through list of videos and checks to see if it is a channel. (video doesn't and shouldn't play if channel)
-        const checkIfChannel = searchTermResponse.data.items.find(video => !video.id.channelId);
-
-        const comments = await youtube.get('/commentThreads', {
-            params:{
-                part: 'snippet,replies',
-                videoId: checkIfChannel === undefined ? 'V9x86Ind880' : checkIfChannel.id.videoId, 
-                order: 'relevance'
-            }
-        });
-        const response3 = await youtube.get('/videos', {
-            params:{
-                id: checkIfChannel === undefined ? 'V9x86Ind880' : checkIfChannel.id.videoId,
-                part: 'snippet,statistics'
-            }
-        });
-        
-        //error checking for fetch viewCounts if a channel is searched.
-        let viewCountsString = ''
-        searchTermResponse.data.items.map((video, i) => {
-            //skips over item if channel
-            if(video.id.channelId){
-                return true;
-            }
-            //first item doesn't need to be added with ,
-            else if(viewCountsString === ''){
-                return viewCountsString = video.id.videoId
-            }
-            //all else is added with , format
-            return viewCountsString = viewCountsString === undefined ? '' : viewCountsString.concat(',', video.id.videoId)
-        })
-
-
-        const viewCountResponse = await youtube.get('/videos', {
-            params:{
-                id: viewCountsString,
-                part: 'statistics'
-            }
-        });
-
-        const subscribeInfo = await youtube.get('/channels', {
-            params:{
-                id: checkIfChannel === undefined ? '' : checkIfChannel.snippet.channelId,
-                part: 'statistics'
-            }
-        });
-
-
-        this.setState({ 
-            videos: searchTermResponse.data.items, 
-            selectedVideo: checkIfChannel, 
-            comments: comments.data.items, 
-            videoDetails: response3.data.items[0], 
-            viewCounts: viewCountResponse.data.items,
-            subscriberCount: subscribeInfo.data.items[0] === undefined ? '' : subscribeInfo.data.items[0].statistics.subscriberCount
-        });
-
+    onSearchSubmit = searchTerm => {
+        this.props.searchTerm(searchTerm);
+        this.props.getComments('V9x86Ind880');
+        this.props.getVideoDetails('V9x86Ind880')
+        this.props.getChannelInfo("UCeiZcfuj0r1ggNl0N_DVOgQ")
+        this.props.getViewCountList(this.props.videos)
+        this.props.selectCurrentVideo(this.props.videos);      
     };
 
     onVideoSelect = async (video) => {
@@ -126,7 +67,7 @@ class App extends React.Component {
     render(){
         return (
             <div className='globalFont'>
-                <SearchBar onTermSubmit={this.onSearchSubmit} />
+                <SearchBar/>
 
                 <div className='ui stackable grid'>
                     <div className='ui row'>
@@ -136,7 +77,6 @@ class App extends React.Component {
                                 comments={this.state.comments}
                                 video={this.state.selectedVideo}  
                                 videoDetails={this.state.videoDetails} 
-                                subscriberCount={this.state.subscriberCount}
                             />
                         </div>
 
@@ -158,4 +98,10 @@ class App extends React.Component {
     };
 };
 
-export default connect(null, {searchTerm, getComments, getVideoDetails})(App);
+const mapStateToProps = state => {
+    return{
+        videos: state.videos
+    }
+}
+
+export default connect(mapStateToProps, {searchTerm, getComments, getVideoDetails, selectCurrentVideo, getChannelInfo, getViewCountList})(App);
