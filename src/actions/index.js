@@ -19,6 +19,8 @@ export const searchTerm = (term) => async dispatch =>{
         type: SEARCH_TERM,
         payload: searchTermResponse.data.items
     })
+    dispatch(selectCurrentVideo(searchTermResponse.data.items));
+    dispatch(getViewCountList(searchTermResponse.data.items));
 };
 
 export const getComments = (id) => async dispatch =>{

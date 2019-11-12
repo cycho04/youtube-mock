@@ -20,25 +20,11 @@ import {
 class App extends React.Component {
 
     state = { 
-        videos: [],
         selectedVideo: null,
         videoDetails: [],
         comments: [],
         viewCounts: [],
         subscriberCount: 0,
-    };
-
-    componentDidMount() {
-        this.onSearchSubmit('Breaking Bad');
-    };
-
-    onSearchSubmit = searchTerm => {
-        this.props.searchTerm(searchTerm);
-        this.props.getComments('V9x86Ind880');
-        this.props.getVideoDetails('V9x86Ind880')
-        this.props.getChannelInfo("UCeiZcfuj0r1ggNl0N_DVOgQ")
-        this.props.getViewCountList(this.props.videos)
-        this.props.selectCurrentVideo(this.props.videos);      
     };
 
     onVideoSelect = async (video) => {
@@ -82,12 +68,7 @@ class App extends React.Component {
 
                         <div className='four wide column'>
                             <Ad />
-                            <VideoList 
-                                onVideoSelect={this.onVideoSelect} 
-                                videos={this.state.videos} 
-                                videoDetails={this.state.videoDetails} 
-                                viewCounts={this.state.viewCounts}
-                            />
+                            <VideoList />
                         </div>
 
                     </div>    

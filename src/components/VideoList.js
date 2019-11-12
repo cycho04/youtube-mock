@@ -2,25 +2,21 @@ import React from 'react';
 
 import './styles/VideoList.css';
 import VideoItem from './VideoItem';
+import {connect} from 'react-redux';
 
 
-const VideoList = props => {
+const VideoList = (props) => {
     const renderedList = props.videos.map((video, index) => {
-        //added a ternary operator into key= when a channel video is in the list, it doesnt have a videoId, but a channelId. looks for either or, depending on which is present.
         return (
             <VideoItem 
-                key={video.id.videoId ? video.id.videoId : video.id.channelId } 
-                onVideoSelect={props.onVideoSelect} 
+                key={index}
                 video={video} 
-                order={index} 
-                viewCounts={props.viewCounts}
             />
         )
     })
 
     return (
         <div className='ui relaxed divided list' >
-            {console.log(props.viewCounts)}
             <div>
                 Up next
                 <div className='ui fitted toggle checkbox right'>
@@ -37,4 +33,10 @@ const VideoList = props => {
     )
 };
 
-export default VideoList;
+const mapStateToProps = state => {
+    return{
+        videos: state.videos
+    }
+}
+
+export default connect(mapStateToProps)(VideoList);

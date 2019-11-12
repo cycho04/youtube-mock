@@ -23,12 +23,10 @@ class SearchBar extends React.Component {
     };
 
     onTermSubmit = term => {
-        this.props.searchTerm(term);
-        this.props.getComments('V9x86Ind880');
-        this.props.getVideoDetails('V9x86Ind880')
-        this.props.getChannelInfo("UCeiZcfuj0r1ggNl0N_DVOgQ")
-        this.props.getViewCountList(this.props.videos)
-        this.props.selectCurrentVideo(this.props.videos);
+        this.props.searchTerm(term)
+        this.props.getComments(this.props.videoId)
+        this.props.getVideoDetails(this.props.videoId)
+        this.props.getChannelInfo(this.props.channelId)
     }
 
     onInputChange = (event) => {
@@ -37,7 +35,6 @@ class SearchBar extends React.Component {
 
     onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state.term);
         this.onTermSubmit(this.state.term);
     }
 
@@ -109,6 +106,8 @@ class SearchBar extends React.Component {
 const mapStateToProps = state => {
     return{
         videos: state.videos,
+        videoId: state.selectedVideo.id.videoId,
+        channelId: state.selectedVideo.snippet.channelId
     }
 }
 

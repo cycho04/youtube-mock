@@ -42,13 +42,14 @@ const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, like
     const fullFormattedDate = getStringMonth(date.getMonth()) + ' ' + date.getDate() + ', ' + date.getFullYear();
 
     //Loading
-    if(false){
-        return (
-            <div className="ui active inverted dimmer">
-                <div className="ui text loader">Loading</div>
-            </div>  
-        )
-    }
+    // if(){
+    //     return (
+    //         <div className="ui active inverted dimmer">
+    //             <div className="ui text loader">Loading</div>
+    //         </div>  
+    //     )
+    // }
+    
     //iframe
     const videoSrc = `https://www.youtube.com/embed/${videoId}`
 

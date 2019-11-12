@@ -274,16 +274,30 @@ export default {
       liveBroadcastContent: 'none'
     }
   },
-  viewCount: {
-    kind: 'youtube#video',
-    etag: '"j6xRRd8dTPVVptg711_CSPADRfg/_CN49Wv9TNl9dFVaTZeXp3vXgmI"',
-    id: 'b_ILDFp5DGA',
-    statistics: {
-      viewCount: '34623629',
-      likeCount: '112760',
-      dislikeCount: '3653',
-      favoriteCount: '0',
-      commentCount: '14313'
+  viewCount: [
+    {
+      kind: 'youtube#video',
+      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/_CN49Wv9TNl9dFVaTZeXp3vXgmI"',
+      id: 'b_ILDFp5DGA',
+      statistics: {
+        viewCount: '34623629',
+        likeCount: '112760',
+        dislikeCount: '3653',
+        favoriteCount: '0',
+        commentCount: '14313'
+      }
+    },
+    {
+      kind: 'youtube#video',
+      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/_CN49Wv9TNl9dFVaTZeXp3vXgmI"',
+      id: 'b_ILDFp5DGA',
+      statistics: {
+        viewCount: '34623629',
+        likeCount: '112760',
+        dislikeCount: '3653',
+        favoriteCount: '0',
+        commentCount: '14313'
+      }
     }
-  }
+  ]
 }
