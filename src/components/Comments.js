@@ -1,5 +1,6 @@
 import React from 'react';
 import ClampLines from 'react-clamp-lines';
+import {connect} from 'react-redux';
 
 import './styles/Comments.css';
 
@@ -10,7 +11,7 @@ const Comments = props => {
             <div className='ui comments'>
                 {props.comments.map((comment) => {
 
-                    const data = comment.snippet.topLevelComment.snippet;   //more readable than nested destructuring
+                    const data = comment.snippet.topLevelComment.snippet;
                     const date = new Date(data.publishedAt) //formatting dates
                     const fullFormattedDate = props.getStringMonth(date.getMonth()) + ' ' + date.getDate() + ', ' + date.getFullYear();
 
@@ -51,4 +52,11 @@ const Comments = props => {
     );
 };
 
-export default Comments;
+const mapStateToProps = state => {
+    return{
+        comments: state.comments,
+
+    }
+}
+
+export default connect(mapStateToProps)(Comments);

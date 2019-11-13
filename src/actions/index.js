@@ -50,12 +50,15 @@ export const getVideoDetails = (id) => async dispatch =>{
     })
 }
 
-export const selectCurrentVideo = (videos) => {
+export const selectCurrentVideo = (videos) => async dispatch => {
     const selectedVideo = videos.find(video => !video.id.channelId);
-    return {
+    dispatch ({
         type: CURRENT_VIDEO,
         payload: selectedVideo
-    }
+    })
+    dispatch(getComments(selectedVideo.id.videoId));
+    dispatch(getVideoDetails(selectedVideo.id.videoId));
+    dispatch(getChannelInfo(selectedVideo.snippet.channelId));
 } 
 
 export const getChannelInfo = (id) => async dispatch =>{

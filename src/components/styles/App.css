@@ -1,7 +1,31 @@
 .globalFont {
     font-family: 'Roboto', sans-serif !important;
+    
 }
 
 .left-place-holder {
     margin-left: 6.0em;
+}
+
+.segment{
+    background: transparent !important;
+}
+
+.red-background {
+    background-image: linear-gradient(salmon, lightsalmon);
+}
+.purple-background {
+    background-image: linear-gradient(pink, lightpink);
+}
+.green-background {
+    background-image: linear-gradient(limegreen, mediumaquamarine);
+}
+.yellow-background {
+    background-image: linear-gradient(gold, khaki);
+}
+.blue-background {
+    background-image: linear-gradient(skyblue, lightsteelblue);
+}
+.gray-background {
+    background-image: linear-gradient(darkgray, lightgray);
 }

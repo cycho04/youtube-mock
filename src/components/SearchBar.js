@@ -1,32 +1,14 @@
 import React from 'react';
 import './styles/SearchBar.css';
 import { connect } from "react-redux";
-import {
-    searchTerm,
-    getComments,
-    getVideoDetails,
-    selectCurrentVideo,
-    getChannelInfo,
-    getViewCountList,
-} from '../actions';
+import { searchTerm } from '../actions';
 
 
 class SearchBar extends React.Component {
-    state = { 
-        term: '',
-        leftIcon: true,
-        videoIcon: true,
-        appIcon: true,
-        messageIcon: true,
-        bellIcon: true,
-        loginIcon: true,
-    };
+    state = { term: ''}
 
     onTermSubmit = term => {
         this.props.searchTerm(term)
-        this.props.getComments(this.props.videoId)
-        this.props.getVideoDetails(this.props.videoId)
-        this.props.getChannelInfo(this.props.channelId)
     }
 
     onInputChange = (event) => {
@@ -38,25 +20,6 @@ class SearchBar extends React.Component {
         this.onTermSubmit(this.state.term);
     }
 
-    handleLeftIconClick = () => {
-        this.setState({ leftIcon: !this.state.leftIcon })
-    }
-    handleVideoIconClick = () => {
-        this.setState({ videoIcon: !this.state.videoIcon })
-    }
-    handleAppIconClick = () => {
-        this.setState({ appIcon: !this.state.appIcon })
-    }
-    handleMessageIconClick = () => {
-        this.setState({ messageIcon: !this.state.messageIcon })
-    }
-    handleBellIconClick = () => {
-        this.setState({ bellIcon: !this.state.bellIcon })
-    }
-    handleLoginIconClick = () => {
-        this.setState({ loginIcon: !this.state.loginIcon })
-    }
-
     render(){
         return (
             <div className='search-bar ui segment'>
@@ -64,11 +27,11 @@ class SearchBar extends React.Component {
                     <div className='three column row'>
                         <div className='five wide column logoSide'>
                             <div className='inside'>
-                                <i onClick={this.handleLeftIconClick} className={`large ${this.state.leftIcon ? 'grey' : 'red'} bars icon`} />
+                                <i className='large bars icon' />
                                 &thinsp;
                                 &thinsp;
                                 &thinsp;
-                                <span onClick={this.handleIconClick}>
+                                <span>
                                     <i className='large red youtube icon'/>
                                     <span>HueTube</span>       
                                 </span>
@@ -90,11 +53,12 @@ class SearchBar extends React.Component {
                         </div>
 
                         <div className='five wide column rightAlign'>
-                            <i onClick={this.handleVideoIconClick} className={`large video icon ${this.state.videoIcon ? 'grey' : 'blue'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i onClick={this.handleAppIconClick} className={`large th icon ${this.state.appIcon ? 'grey' : 'green'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i onClick={this.handleMessageIconClick} className={`large envelope outline icon ${this.state.messageIcon ? 'grey' : 'pink'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i onClick={this.handleBellIconClick} className={`large bell icon ${this.state.bellIcon ? 'grey' : 'yellow'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
-                            <i onClick={this.handleLoginIconClick} className={`large inverted circular user icon ${this.state.loginIcon ? 'grey' : 'purple'} `}/>
+                            <i className={`large bullseye icon ${this.state.videoIcon ? 'grey' : 'red'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i className={`large heartbeat icon ${this.state.appIcon ? 'grey' : 'purple'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i className={`large flask icon ${this.state.messageIcon ? 'grey' : 'green'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i className={`large bell icon ${this.state.bellIcon ? 'grey' : 'yellow'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i className={`large umbrella icon ${this.state.bellIcon ? 'grey' : 'blue'}`}/>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i className={`large inverted circular bomb icon ${this.state.loginIcon ? 'grey' : 'black'} `}/>
                         </div>
                     </div>
                 </div>  
@@ -112,12 +76,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-    searchTerm,
-    getComments,
-    getVideoDetails,
-    selectCurrentVideo,
-    getChannelInfo,
-    getViewCountList,
+    searchTerm
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);            

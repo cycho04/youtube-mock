@@ -106,7 +106,7 @@ const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, like
                 <div className='ui divider font'></div>
                 <h3>{Number(commentCount).toLocaleString()} Comments &thinsp; &thinsp; &thinsp; &thinsp; <span><i className='sort amount up icon'/>SORT BY</span></h3>
             </div>
-            <Comments comments={comments} getStringMonth={getStringMonth} />
+            <Comments getStringMonth={getStringMonth} />
         </div>
     )
 }
