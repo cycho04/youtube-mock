@@ -19,7 +19,7 @@ const VideoItem  = props => {
     const formattedNumber = Number(findViewCount(props.video.id.videoId)).toLocaleString();
     return (
         <a onClick={() => console.log('hello')} className='video-item item overflow'>
-            <img alt={props.video.snippet.title} className='ui image' src={props.video.snippet.thumbnails.medium.url} />
+            <img alt={props.video.snippet.title} className='ui image thumbnail' src={props.video.snippet.thumbnails.medium.url} />
             <div className='content fillOuterContainer'>
                 <div className='header title'>{props.video.snippet.title}</div>
                 <div className='meta'>{props.video.snippet.channelTitle}</div>

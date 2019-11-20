@@ -10,7 +10,7 @@ import { searchTerm } from '../../actions';
 
 const App = () => {
     return (
-        <div className={`globalFont ${true ? 'gray-background' : 'hello'}`}>
+        <div className={`globalFont ${true ? 'backgroundd' : 'hello'}`}>
             <SearchBar/>
             <div className='ui stackable grid'>
                 <div className='ui row'>   

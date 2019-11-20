@@ -56,7 +56,7 @@ const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, like
     //render
     return (
         <div>
-            <div className='ui embed'>
+            <div className='ui embed video'>
                 <iframe title='video player' src={videoSrc} />
             </div>
             <div className='ui segment videoDetail'>

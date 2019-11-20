@@ -1,3 +1,5 @@
+@import "../../styles/colors.scss";
+
 .globalFont {
     font-family: 'Roboto', sans-serif !important;
     
@@ -11,21 +13,6 @@
     background: transparent !important;
 }
 
-.red-background {
-    background-image: linear-gradient(salmon, lightsalmon);
-}
-.purple-background {
-    background-image: linear-gradient(pink, lightpink);
-}
-.green-background {
-    background-image: linear-gradient(limegreen, mediumaquamarine);
-}
-.yellow-background {
-    background-image: linear-gradient(gold, khaki);
-}
-.blue-background {
-    background-image: linear-gradient(skyblue, lightsteelblue);
-}
-.gray-background {
-    background-image: linear-gradient(darkgray, lightgray);
+.backgroundd{
+    background-image: linear-gradient($grayBG1, $grayBG2);
 }
