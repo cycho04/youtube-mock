@@ -1,6 +1,6 @@
 import React from 'react';
-import Comments from './Comments';
-import './styles/VideoDetail.css';
+import Comments from '../Comments/Comments';
+import './VideoDetail.scss';
 import ClampLines from 'react-clamp-lines';
 import {connect} from 'react-redux';
 

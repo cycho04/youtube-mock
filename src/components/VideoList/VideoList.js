@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './styles/VideoList.css';
-import VideoItem from './VideoItem';
+import './VideoList.scss';
+import VideoItem from '../VideoItem/VideoItem';
 import {connect} from 'react-redux';
 
 

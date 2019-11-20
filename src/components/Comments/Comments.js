@@ -2,7 +2,7 @@ import React from 'react';
 import ClampLines from 'react-clamp-lines';
 import {connect} from 'react-redux';
 
-import './styles/Comments.css';
+import './Comments.scss';
 
 
 const Comments = props => {

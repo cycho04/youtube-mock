@@ -1,11 +1,11 @@
 import React from 'react';
-import './styles/App.css';
-import Ad from './Ad';
-import SearchBar from './SearchBar';
-import VideoDetail from './VideoDetail';
-import VideoList from './VideoList';
+import './App.scss';
+import Ad from '../Ad/Ad';
+import SearchBar from '../SearchBar/SearchBar';
+import VideoDetail from '../VideoDetails/VideoDetail';
+import VideoList from '../VideoList/VideoList';
 import { connect } from "react-redux";
-import { searchTerm } from '../actions';
+import { searchTerm } from '../../actions';
 
 
 const App = () => {

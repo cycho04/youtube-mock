@@ -1,7 +1,7 @@
 import React from 'react';
-import './styles/SearchBar.css';
+import './SearchBar.scss';
 import { connect } from "react-redux";
-import { searchTerm } from '../actions';
+import { searchTerm } from '../../actions';
 
 
 class SearchBar extends React.Component {
