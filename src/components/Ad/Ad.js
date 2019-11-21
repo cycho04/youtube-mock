@@ -7,7 +7,9 @@ import './Ad.scss';
 const Ad = () => {
     return (
         <div className='ui banner ad'>
-            <img src={faker.image.image()} alt='Images Generated from faker.js'/>
+            YOUR AD HERE 
+            <br />
+            555 - 555 - 5555
         </div>
     )
 }
