@@ -4,7 +4,7 @@ import './VideoDetail.scss';
 import ClampLines from 'react-clamp-lines';
 import {connect} from 'react-redux';
 
-const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, likeCount, dislikeCount, url, channelTitle, description, commentCount, comments, subscriberCount}) => {
+const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, likeCount, dislikeCount, url, channelTitle, description, commentCount, comments, subscriberCount, color}) => {
     //Format Date here
     const date = new Date(publishedAt);
 
@@ -63,16 +63,16 @@ const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, like
                 <div className='ui secondary pointing menu'>
                     <div className='item cutLeftPadding'>
                         <div className='content'>
-                            <div className='header spacing'><h3>{title}</h3></div>
-                            <div className='meta'><h3>{Number(viewCount).toLocaleString()} views</h3></div>
+                            <div className='header spacing'><h3 className={color}>{title}</h3></div>
+                            <div className='meta'><h3 className={color}>{Number(viewCount).toLocaleString()} views</h3></div>
                         </div>
                     </div>
                     <div className='right menu'>
-                        <a className='active item' href='#'><i className='thumbs grey up icon'/>{likeCount.toLocaleString()}</a>
-                        <a className='item' href='#'><i className='thumbs grey down icon'/>{dislikeCount.toLocaleString()}</a>
-                        <a className='item' href='#'><i className='share grey icon'/>Share</a>
-                        <a className='item' href='#'><i className='plus grey icon'/>Save</a>
-                        <a className='item' href='#'><i className='ellipsis horizontal grey icon'/></a>
+                        <a className={`${color} item`} href='#'><i className='thumbs up icon'/>{likeCount.toLocaleString()}</a>
+                        <a className={`${color} item`} href='#'><i className='thumbs down icon'/>{dislikeCount.toLocaleString()}</a>
+                        <a className={`${color} item`} href='#'><i className='share icon'/>Share</a>
+                        <a className={`${color} item`} href='#'><i className='plus icon'/>Save</a>
+                        <a className={`${color} item`} href='#'><i className='ellipsis horizontal icon'/></a>
                     </div>
                 </div>
                 
@@ -82,9 +82,9 @@ const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, like
                         <div className='ui event'>
                             <div className='label'><img src={url} alt='Channel Avatar'/></div>
                             <div className='content'>
-                                <div className='summary'>{channelTitle}</div>
-                                <div className='meta'>{`Published on ${fullFormattedDate}`}</div>
-                                <div className='extra text'>
+                                <div className={`${color} summary`}>{channelTitle}</div>
+                                <div className={`${color}`}>{`Published on ${fullFormattedDate}`}</div>
+                                <div className={`${color} extra text`}>
                                     <ClampLines
                                         text={description}
                                         lines="3"
@@ -98,13 +98,13 @@ const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, like
                         </div> 
                     </div>
                     
-                    <div className='column moveButton'><button className='ui red button'>SUBSCRIBE {subscriberCount}</button></div>
+                    <div className='column moveButton'><button className={`${color} ui red button`}>SUBSCRIBE {subscriberCount}</button></div>
                 </div>
                 
                     
                 
                 <div className='ui divider font'></div>
-                <h3>{Number(commentCount).toLocaleString()} Comments &thinsp; &thinsp; &thinsp; &thinsp; <span><i className='sort amount up icon'/>SORT BY</span></h3>
+                <h3 className={color}>{Number(commentCount).toLocaleString()} Comments &thinsp; &thinsp; &thinsp; &thinsp; <span className={color}><i className='sort amount up icon'/>SORT BY</span></h3>
             </div>
             <Comments getStringMonth={getStringMonth} />
         </div>
@@ -124,6 +124,7 @@ const mapStateToProps = state => {
         description: state.videoDetails.snippet.description,
         subscriberCount: state.channelInfo.statistics.subscriberCount,
         commentCount: state.videoDetails.statistics.commentCount,
+        color: state.color,
     }
 }
 

@@ -21,15 +21,15 @@ const Comments = props => {
                                 <img src={data.authorProfileImageUrl} alt={data.authorDisplayName} />
                             </div>
                             <div className='content'>
-                                <div className='author'>
+                                <div className={`author ${props.color}`}>
                                     {data.authorDisplayName}
                                     <span className='metadata'>
-                                        <span className='date'>
+                                        <span className={`date ${props.color}`}>
                                             {fullFormattedDate}
                                         </span>
                                     </span>
                                 </div> 
-                                <div className='text'>
+                                <div className={`text ${props.color}`}>
                                     <ClampLines
                                         text={data.textOriginal}  
                                         lines='4'
@@ -37,8 +37,8 @@ const Comments = props => {
                                     />
                                 </div>
                                 <div className='actions'>
-                                    <div className='spacing'>
-                                        <i className='thumbs grey up icon'/> {data.likeCount || ''} <i className='thumbs grey down icon'/>
+                                    <div className={`spacing ${props.color}`}>
+                                        <i className='thumbs up icon'/> {data.likeCount || ''} <i className='thumbs down icon'/>
                                         <span>REPLY</span>
                                     </div>
                                     <div>{comment.replies ? `View ${comment.replies.comments.length} replies` : ''}{comment.replies ? <i className='angle down icon'/> : ''}</div>
@@ -55,7 +55,7 @@ const Comments = props => {
 const mapStateToProps = state => {
     return{
         comments: state.comments,
-
+        color: state.color,
     }
 }
 

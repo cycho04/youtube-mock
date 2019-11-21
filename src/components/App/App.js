@@ -8,9 +8,9 @@ import { connect } from "react-redux";
 import { searchTerm } from '../../actions';
 
 
-const App = () => {
+const App = props => {
     return (
-        <div className={`globalFont ${true ? 'backgroundd' : 'hello'}`}>
+        <div className={`globalFont ${props.color}`}>
             <SearchBar/>
             <div className='ui stackable grid'>
                 <div className='ui row'>   
@@ -29,7 +29,8 @@ const App = () => {
 
 const mapStateToProps = state => {
     return{
-        videos: state.videos
+        videos: state.videos,
+        color: state.color,
     }
 }
 

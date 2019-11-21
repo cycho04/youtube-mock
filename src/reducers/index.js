@@ -5,6 +5,7 @@ import videoDetailsReducer from './videoDetailsReducer'
 import channelInfoReducer from './channelInfoReducer';
 import viewCountReducer from './viewCountReducer';
 import selectdVideoReducer from './selectedVideoReducer';
+import colorReducer from './colorReducer';
 
 export default combineReducers({
     videos: termReducer,
@@ -13,4 +14,5 @@ export default combineReducers({
     selectedVideo: selectdVideoReducer,
     channelInfo: channelInfoReducer,
     viewCount: viewCountReducer,
+    color: colorReducer,
 });

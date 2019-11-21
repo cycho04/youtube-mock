@@ -1,3 +1,5 @@
+@import '../../styles/colors.scss';
+
 .rightAlign {
     text-align: right;
 }
@@ -12,4 +14,8 @@
     top: 50%;
     transform: translateY(-50%);
     font-weight: 900 !important;
+}
+
+.search-txt{
+    color: $redTxt !important;
 }

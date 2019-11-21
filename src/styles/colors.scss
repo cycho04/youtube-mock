@@ -1,20 +1,45 @@
 $main-font: 'black';
 $second-font: 'gray';
 
-$redBG1: #7a2828;
-$redBG2: #870000;
+$redBG: #F66F67;
+$redTxt: #3C3D47;
 
-$purpleBG1: #7b4397;
-$purpleBG2: #dc2430;
+$purpleBG: #380E7F;
+$purpleTxt: #F7bE17;
 
-$greenBG1: #71B280;
-$greenBG2: rgb(30, 90, 107);
+$greenBG: #1F6650;
+$greenTxt: #DCFFCC;
 
-$yellowBG1: gold;
-$yellowBG2: #ffffff;
+$yellowBG: #FFD369;
+$yellowTxt: #5B0909;
 
-$blueBG1: #6190e8;
-$blueBG2: #a7bfe8;
+$blueBG: #1D4D4F;
+$blueTxt: #6BA8A9;
 
-$grayBG1: #434343;
-$grayBG2: #000000;
+$grayBG: #708090;
+$grayTxt: #FC644D;
+
+.redBG{
+    color: $redTxt !important;
+    transition: all 2s ease-in-out;
+}
+.purpleBG{
+    color: $purpleTxt !important;
+    transition: all 2s ease-in-out;
+}
+.greenBG{
+    color: $greenTxt !important;
+    transition: all 2s ease-in-out;
+}
+.yellowBG{
+    color: $yellowTxt !important;
+    transition: all 2s ease-in-out;
+}
+.blueBG{
+    color: $blueTxt !important;
+    transition: all 2s ease-in-out;
+}
+.grayBG{
+    color: $grayTxt !important;
+    transition: all 2s ease-in-out;
+}

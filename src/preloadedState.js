@@ -299,5 +299,6 @@ export default {
         commentCount: '14313'
       }
     }
-  ]
+  ],
+  color: 'redBG'
 }

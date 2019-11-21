@@ -19,13 +19,6 @@ const VideoList = (props) => {
         <div className='ui relaxed divided list' >
             <div>
                 Up next
-                <div className='ui fitted toggle checkbox right'>
-                    <input type='checkbox'/>
-                    <label></label>
-                </div>
-                <span className='right'>
-                    Auto-Play &thinsp; &thinsp; &thinsp;
-                </span>
             </div>
             {renderedList}
             <button className='ui button fluid'>Does Nothing </button>

@@ -2,7 +2,7 @@
 
 .globalFont {
     font-family: 'Roboto', sans-serif !important;
-    
+    transition: all 2s ease-in-out;
 }
 
 .left-place-holder {
@@ -13,6 +13,21 @@
     background: transparent !important;
 }
 
-.backgroundd{
-    background-image: linear-gradient($grayBG1, $grayBG2);
+.redBG{
+    background-color: $redBG;
+}
+.purpleBG{
+    background-color: $purpleBG;
+}
+.greenBG{
+    background-color: $greenBG;
+}
+.yellowBG{
+    background-color: $yellowBG;
+}
+.blueBG{
+    background-color: $blueBG;
+}
+.grayBG{
+    background-color: $grayBG;
 }

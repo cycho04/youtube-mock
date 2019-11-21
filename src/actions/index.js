@@ -6,6 +6,7 @@ import {
     CURRENT_VIDEO,
     CHANNEL_INFO,
     VIEW_COUNTS,
+    CHANGE_COLOR,
 } from './types';
 
 export const searchTerm = (term) => async dispatch =>{
@@ -99,3 +100,10 @@ export const getViewCountList = (videos) => async dispatch =>{
         payload: viewCountResponse.data.items
     })
 }
+
+export const changeColor = (color) => async dispatch => {
+    dispatch ({
+        type: CHANGE_COLOR,
+        payload: color
+    })
+} 
