@@ -67,13 +67,6 @@ const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, like
                             <div className='meta'><h3 className={color}>{Number(viewCount).toLocaleString()} views</h3></div>
                         </div>
                     </div>
-                    <div className='right menu'>
-                        <a className={`${color} item`} href='#'><i className='thumbs up icon'/>{likeCount.toLocaleString()}</a>
-                        <a className={`${color} item`} href='#'><i className='thumbs down icon'/>{dislikeCount.toLocaleString()}</a>
-                        <a className={`${color} item`} href='#'><i className='share icon'/>Share</a>
-                        <a className={`${color} item`} href='#'><i className='plus icon'/>Save</a>
-                        <a className={`${color} item`} href='#'><i className='ellipsis horizontal icon'/></a>
-                    </div>
                 </div>
                 
                
@@ -84,7 +77,7 @@ const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, like
                             <div className='content'>
                                 <div className={`${color} summary`}>{channelTitle}</div>
                                 <div className={`${color}`}>{`Published on ${fullFormattedDate}`}</div>
-                                <div className={`${color} extra text`}>
+                                <div className={`${color} extra`}>
                                     <ClampLines
                                         text={description}
                                         lines="3"

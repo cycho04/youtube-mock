@@ -13,11 +13,11 @@ const App = props => {
         <div className={`globalFont ${props.color}`}>
             <SearchBar/>
             <div className='ui stackable grid'>
-                <div className='ui row'>   
+                <div className='ui row main-section'>   
                     <div className='ten wide column left-place-holder'>
                         <VideoDetail />
                     </div>
-                    <div className='four wide column'>
+                    <div className='four wide column vlist'>
                         <Ad />
                         <VideoList />
                     </div>

@@ -7,10 +7,16 @@
 
 .left-place-holder {
     margin-left: 6.0em;
+    @media screen and (max-width: 1024px){
+        margin-left: 0.5rem;
+    }    
 }
 
 .segment{
     background: transparent !important;
+}
+.vlist{
+    padding: 0 !important;
 }
 
 .redBG{
@@ -31,3 +37,8 @@
 .grayBG{
     background-color: $grayBG;
 }
+
+body {
+    overscroll-behavior: none;
+}
+

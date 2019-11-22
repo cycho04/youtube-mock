@@ -21,9 +21,9 @@ const VideoItem  = props => {
         <a onClick={() => console.log('hello')} className='video-item item overflow'>
             <img alt={props.video.snippet.title} className='ui image thumbnail' src={props.video.snippet.thumbnails.medium.url} />
             <div className='content fillOuterContainer'>
-                <div className={`${props.color} header title`}>{props.video.snippet.title}</div>
-                <div className={`${props.color}`}>{props.video.snippet.channelTitle}</div>
-                <div className={`${props.color}`}>{`${formattedNumber} views`}</div>
+                <div className={`${props.color} text header title`}>{props.video.snippet.title}</div>
+                <div className={`${props.color} text`}>{props.video.snippet.channelTitle}</div>
+                <div className={`${props.color} text`}>{`${formattedNumber} views`}</div>
             </div>
             {props.order === 0 ? <div className='ui divider'></div> : ''}
         </a>

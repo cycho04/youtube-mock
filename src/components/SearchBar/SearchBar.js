@@ -23,8 +23,8 @@ class SearchBar extends React.Component {
         return (
             <div className='search-bar ui segment'>
                 <div className='ui grid'>
-                    <div className='three column row'>
-                        <div className='five wide column logoSide'>
+                    <div className='three column row outer-search'>
+                        <div className='logoSide'>
                             <div className='inside'>
                                 <i className={`large bars icon ${this.props.color}`} />
                                 &thinsp;
@@ -36,8 +36,7 @@ class SearchBar extends React.Component {
                                 </span>
                             </div>
                         </div>
-                        
-                        <div className='six wide column'>
+                        <div className='searchSide'>
                             <form onSubmit={this.onFormSubmit} className='ui form'>
                                 <div className='ui fluid input'>
                                     <input 
@@ -50,38 +49,81 @@ class SearchBar extends React.Component {
                                 </div>
                             </form>
                         </div>
-
-                        <div className='five wide column rightAlign'>
+                        <div className='rightAlign'>
                             <i 
                                 onClick={() => this.props.changeColor('redBG')} 
                                 className={`large bullseye icon ${this.props.color === 'redBG' ? 'grey' : 'red'}`}
                             />
-                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
                             <i 
                                 onClick={() => this.props.changeColor('purpleBG')} 
                                 className={`large heartbeat icon ${this.props.color === 'purpleBG' ? 'grey' : 'purple'}`}
                             />
-                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
                             <i 
                                 onClick={() => this.props.changeColor('greenBG')} 
                                 className={`large flask icon ${this.props.color === 'greenBG' ? 'grey' : 'green'}`}
                             />
-                                &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                                &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
                             <i 
                                 onClick={() => this.props.changeColor('yellowBG')} 
                                 className={`large bell icon ${this.props.color === 'yellowBG' ? 'grey' : 'yellow'}`}
                             />
-                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
                             <i 
                                 onClick={() => this.props.changeColor('blueBG')} 
                                 className={`large umbrella icon ${this.props.color === 'blueBG' ? 'grey' : 'blue'}`}
                             />
-                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
                             <i 
                                 onClick={() => this.props.changeColor('grayBG')} 
                                 className={`large inverted circular bomb icon ${this.props.color === 'grayBG' ? 'grey' : 'black'} `}
                             />
                         </div>
+
+                        <div className='searchSide hidden-nav-search'>
+                            <form onSubmit={this.onFormSubmit} className='ui form'>
+                                <div className='ui fluid input'>
+                                    <input 
+                                        type='text'
+                                        value={this.state.term}
+                                        onChange={this.onInputChange}   
+                                        placeholder='Search' 
+                                    />
+                                    <button className='ui button'><i className='search icon' /></button>
+                                </div>
+                            </form>
+                            <i 
+                                onClick={() => this.props.changeColor('redBG')} 
+                                className={`large bullseye icon ${this.props.color === 'redBG' ? 'grey' : 'red'}`}
+                            />
+                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i 
+                                onClick={() => this.props.changeColor('purpleBG')} 
+                                className={`large heartbeat icon ${this.props.color === 'purpleBG' ? 'grey' : 'purple'}`}
+                            />
+                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i 
+                                onClick={() => this.props.changeColor('greenBG')} 
+                                className={`large flask icon ${this.props.color === 'greenBG' ? 'grey' : 'green'}`}
+                            />
+                                &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i 
+                                onClick={() => this.props.changeColor('yellowBG')} 
+                                className={`large bell icon ${this.props.color === 'yellowBG' ? 'grey' : 'yellow'}`}
+                            />
+                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i 
+                                onClick={() => this.props.changeColor('blueBG')} 
+                                className={`large umbrella icon ${this.props.color === 'blueBG' ? 'grey' : 'blue'}`}
+                            />
+                            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+                            <i 
+                                onClick={() => this.props.changeColor('grayBG')} 
+                                className={`large inverted circular bomb icon ${this.props.color === 'grayBG' ? 'grey' : 'black'} `}
+                            />
+                        </div>
+
                     </div>
                 </div>  
             </div>

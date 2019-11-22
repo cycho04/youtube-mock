@@ -9,7 +9,7 @@
 }
 /*makes div fit each video item's width. else ellipsis occurs earlier*/
 .fillOuterContainer {
-    width: 100% !important;
+    width: auto !important;
 }
 
 .title {
@@ -22,4 +22,8 @@
 
 .thumbnail {
     border-radius: 5px;
+}
+
+.text {
+    width: 30%;
 }

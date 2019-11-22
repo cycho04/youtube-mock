@@ -2,12 +2,49 @@
 
 .rightAlign {
     text-align: right;
+    width: 33%;
+    @media screen and (max-width: 1024px){
+        width: 40%;
+    }
+    @media screen and (max-width: 768px){
+        width: 50%;
+        padding-right: 2rem;
+        box-sizing: border-box;
+    }
+    @media screen and (max-width: 620px){
+        display: none;
+    }
 }
 
 
 /* used to vertically center */
 .logoSide {
     position: relative;
+    width: 33%;
+    @media screen and (max-width: 1024px){
+        width: 30%;
+    }
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+    padding-left: 2rem;
+    box-sizing: border-box;
+}
+
+.searchSide{
+    width: 33%;
+    @media screen and (max-width: 620px){
+        width: 100%;
+        display: none;
+    }
+    @media screen and (max-width: 768px){
+        width: 50%;
+        padding-left: 2rem;
+        box-sizing: border-box;
+    }
+    @media screen and (max-width: 1024px){
+        width: 30%;
+    }
 }
 .inside {
     position: absolute;
@@ -19,3 +56,13 @@
 .search-txt{
     color: $redTxt !important;
 }
+
+.hidden-nav-search{
+    display: none;
+    @media screen and (max-width: 620px){
+        display: initial;
+        padding: 1rem !important;
+        width: 100%;
+    }
+}
+

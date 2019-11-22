@@ -10,6 +10,7 @@
 
 .cutLeftPadding {
     padding-left: 0 !important;
+    width: 100% !important;
 }
 
 .spacing h3 {
@@ -54,6 +55,10 @@ h3 span {
     -webkit-line-clamp: 3 !important;
 }
 
+.clamped-text{
+    padding-top: 1rem !important;
+}
+
 .clamp-lines__button {
     background: none;
     border: none;
@@ -65,3 +70,4 @@ h3 span {
 .video {
     border-radius: 12px;
 }
+
