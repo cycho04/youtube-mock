@@ -3,7 +3,6 @@ import './SearchBar.scss';
 import { connect } from "react-redux";
 import { searchTerm, changeColor } from '../../actions';
 
-
 class SearchBar extends React.Component {
     state = { term: ''}
 
@@ -25,17 +24,11 @@ class SearchBar extends React.Component {
                 <div className='ui grid'>
                     <div className='three column row outer-search'>
                         <div className='logoSide'>
-                            <div className='inside'>
-                                <i className={`large bars icon ${this.props.color}`} />
-                                &thinsp;
-                                &thinsp;
-                                &thinsp;
-                                <span>
-                                    <i className='large red youtube icon'/>
-                                    <span className={this.props.color}>HueTube</span>       
-                                </span>
+                            <div className='inside main-icon'>
+                                <h3 className={this.props.color}><i className='large tint icon' />HueTube</h3>       
                             </div>
                         </div>
+
                         <div className='searchSide'>
                             <form onSubmit={this.onFormSubmit} className='ui form'>
                                 <div className='ui fluid input'>

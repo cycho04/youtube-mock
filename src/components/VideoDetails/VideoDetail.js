@@ -3,52 +3,12 @@ import Comments from '../Comments/Comments';
 import './VideoDetail.scss';
 import ClampLines from 'react-clamp-lines';
 import {connect} from 'react-redux';
+import {formatDate} from '../../utils/formatDate';
 
-const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, likeCount, dislikeCount, url, channelTitle, description, commentCount, comments, subscriberCount, color}) => {
-    //Format Date here
-    const date = new Date(publishedAt);
+const VideoDetail = ({publishedAt, videoId, title, viewCount, url, channelTitle, description, commentCount, subscriberCount, color}) => {
 
-    const getStringMonth = number => {
-        switch(number){
-            case 0:
-                return 'Jan'
-            case 1:
-                return 'Feb'
-            case 2:
-                return 'Mar'
-            case 3:
-                return 'Apr'
-            case 4: 
-                return 'May'
-            case 5: 
-                return 'Jun'
-            case 6:    
-                return 'Jul'
-            case 7: 
-                return 'Aug'
-            case 8: 
-                return 'Sep'
-            case 9: 
-                return 'Oct'
-            case 10: 
-                return 'Nov'
-            case 11:
-                return 'Dec'
-            default:
-                return ''
-        }
-    }
 
-    const fullFormattedDate = getStringMonth(date.getMonth()) + ' ' + date.getDate() + ', ' + date.getFullYear();
-
-    //Loading
-    // if(){
-    //     return (
-    //         <div className="ui active inverted dimmer">
-    //             <div className="ui text loader">Loading</div>
-    //         </div>  
-    //     )
-    // }
+    const fullFormattedDate = formatDate(publishedAt);
     
     //iframe
     const videoSrc = `https://www.youtube.com/embed/${videoId}`
@@ -99,7 +59,7 @@ const VideoDetail = ({publishedAt, videoId, title, videoDetails, viewCount, like
                 <div className='ui divider font'></div>
                 <h3 className={color}>{Number(commentCount).toLocaleString()} Comments &thinsp; &thinsp; &thinsp; &thinsp; <span className={color}><i className='sort amount up icon'/>SORT BY</span></h3>
             </div>
-            <Comments getStringMonth={getStringMonth} />
+            <Comments />
         </div>
     )
 }

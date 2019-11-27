@@ -66,3 +66,35 @@
     }
 }
 
+.main-icon{
+    :hover{
+       animation: 3s rainbow infinite;  
+    }
+}
+@keyframes rainbow{
+    0% { 
+        color: black;
+    }
+    15% {
+        color: $grayBG;
+    }
+    30% {
+        color: $purpleBG;
+    }
+    45% {
+        color: $greenBG;
+    }
+    60% {
+        color: $yellowBG;
+    }
+    75% {
+        color: $blueBG;
+    }
+    90% {
+        color: $redBG
+    }
+    100% {
+        color: black;
+    }
+}
+

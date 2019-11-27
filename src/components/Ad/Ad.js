@@ -1,5 +1,4 @@
 import React from 'react';
-import faker from 'faker'; //random image generator
 
 import './Ad.scss';
 
@@ -7,9 +6,9 @@ import './Ad.scss';
 const Ad = () => {
     return (
         <div className='ui banner ad'>
-            YOUR AD HERE 
+            Watch all the same YouTube videos,
             <br />
-            555 - 555 - 5555
+            but with FLAVOR.
         </div>
     )
 }

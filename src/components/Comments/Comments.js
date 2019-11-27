@@ -1,6 +1,7 @@
 import React from 'react';
 import ClampLines from 'react-clamp-lines';
 import {connect} from 'react-redux';
+import {formatDate} from '../../utils/formatDate';
 
 import './Comments.scss';
 
@@ -12,9 +13,8 @@ const Comments = props => {
                 {props.comments.map((comment) => {
 
                     const data = comment.snippet.topLevelComment.snippet;
-                    const date = new Date(data.publishedAt) //formatting dates
-                    const fullFormattedDate = props.getStringMonth(date.getMonth()) + ' ' + date.getDate() + ', ' + date.getFullYear();
-
+                    const fullFormattedDate = formatDate(data.publishedAt);
+                    
                     return(
                         <div key={comment.id} className='comment bottomSpacing'>
                             <div className='avatar'>
