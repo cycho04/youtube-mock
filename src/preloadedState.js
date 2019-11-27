@@ -1803,5 +1803,5 @@ export default {
       }
     }
   ],
-  color: 'redBG'
+  color: 'white'
 }

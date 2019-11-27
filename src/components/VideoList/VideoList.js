@@ -21,7 +21,7 @@ const VideoList = (props) => {
                 Up next
             </div>
             {renderedList}
-            <button className='ui button fluid'>Does Nothing </button>
+            {/* <button className='ui button fluid'>Does Nothing </button> */}
         </div>
     )
 };

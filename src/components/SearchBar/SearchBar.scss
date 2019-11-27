@@ -1,49 +1,19 @@
 @import '../../styles/colors.scss';
 
-.rightAlign {
-    text-align: right;
-    width: 33%;
-    @media screen and (max-width: 1024px){
-        width: 40%;
-    }
-    @media screen and (max-width: 768px){
-        width: 50%;
-        padding-right: 2rem;
-        box-sizing: border-box;
-    }
-    @media screen and (max-width: 620px){
-        display: none;
-    }
-}
-
-
 /* used to vertically center */
 .logoSide {
     position: relative;
-    width: 33%;
-    @media screen and (max-width: 1024px){
-        width: 30%;
-    }
-    @media screen and (max-width: 768px){
-        display: none;
-    }
-    padding-left: 2rem;
+    width: 40%;
+    padding-left: 4rem;
     box-sizing: border-box;
 }
 
 .searchSide{
-    width: 33%;
-    @media screen and (max-width: 620px){
-        width: 100%;
-        display: none;
-    }
+    width: 50%;
     @media screen and (max-width: 768px){
-        width: 50%;
+        width: 40%;
         padding-left: 2rem;
         box-sizing: border-box;
-    }
-    @media screen and (max-width: 1024px){
-        width: 30%;
     }
 }
 .inside {
@@ -57,20 +27,38 @@
     color: $redTxt !important;
 }
 
-.hidden-nav-search{
-    display: none;
-    @media screen and (max-width: 620px){
-        display: initial;
-        padding: 1rem !important;
-        width: 100%;
-    }
-}
-
 .main-icon{
     :hover{
        animation: 3s rainbow infinite;  
     }
 }
+.red{
+    color: red;
+}
+.purple{
+    color: purple;
+}
+.green{
+    color: green;
+}
+.yellow{
+    color: yellow;
+}
+.blue{
+    color: blue;
+}
+.black{
+    color: gray;
+}
+
+.form{
+    width: 100%;
+}
+.icons{
+    font-size: 2rem;
+    margin: 1rem;
+}
+
 @keyframes rainbow{
     0% { 
         color: black;
@@ -96,5 +84,13 @@
     100% {
         color: black;
     }
+}
+
+.popper{
+    background-color: white;
+    width: auto;
+    padding: 1.1rem;
+    border-radius: 5px;
+    margin: 0.2rem;
 }
 
