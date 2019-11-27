@@ -4,9 +4,9 @@ import './VideoDetail.scss';
 import ClampLines from 'react-clamp-lines';
 import {connect} from 'react-redux';
 import {formatDate} from '../../utils/formatDate';
+import {numShortener} from '../../utils/numShortener';
 
 const VideoDetail = ({publishedAt, videoId, title, viewCount, url, channelTitle, description, commentCount, subscriberCount, color}) => {
-
 
     const fullFormattedDate = formatDate(publishedAt);
     
@@ -51,7 +51,7 @@ const VideoDetail = ({publishedAt, videoId, title, viewCount, url, channelTitle,
                         </div> 
                     </div>
                     
-                    <div className='column moveButton'><button className={`${color} ui red button`}>SUBSCRIBE {subscriberCount}</button></div>
+                    <div className='column moveButton'><button className={`${color} ui red button`}>SUBSCRIBE {numShortener(subscriberCount)}</button></div>
                 </div>
                 
                     
