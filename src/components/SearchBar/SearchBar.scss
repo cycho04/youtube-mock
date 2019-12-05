@@ -94,3 +94,10 @@
     margin: 0.2rem;
 }
 
+.pop{
+    transition: 1s ease;
+    &:hover{
+        color: black;
+    }
+    cursor: pointer;
+}

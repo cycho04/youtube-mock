@@ -16,40 +16,40 @@ const ColorPopper = props => {
         <Popper open={open} popper={open} className='popper'>
             <FontAwesomeIcon
                 onClick={() => changeColor('redBG')} 
-                className={`icons ${color === 'redBG' ? 'black' : 'red'}`}
+                className={`pop icons ${color === 'redBG' ? 'black' : 'red'}`}
                 icon={faPepperHot}
             />
             <FontAwesomeIcon
                 icon={faIceCream}
                 onClick={() => changeColor('purpleBG')} 
-                className={`icons ${color === 'purpleBG' ? 'black' : 'purple'}`}
+                className={`pop icons ${color === 'purpleBG' ? 'black' : 'purple'}`}
             />
             <FontAwesomeIcon
                 icon={faAppleAlt}
                 onClick={() => changeColor('greenBG')} 
-                className={`icons ${color === 'greenBG' ? 'black' : 'green'}`}
+                className={`pop icons ${color === 'greenBG' ? 'black' : 'green'}`}
             />
             <FontAwesomeIcon
                 icon={faCheese} 
                 onClick={() => changeColor('yellowBG')} 
-                className={`icons ${color === 'yellowBG' ? 'black' : 'yellow'}`}
+                className={`pop icons ${color === 'yellowBG' ? 'black' : 'yellow'}`}
             />
             <FontAwesomeIcon
                 icon={faFish}
                 onClick={() => changeColor('blueBG')} 
-                className={`icons ${color === 'blueBG' ? 'black' : 'blue'}`}
+                className={`pop icons ${color === 'blueBG' ? 'black' : 'blue'}`}
             />
             <FontAwesomeIcon
                 icon={faBone}
                 onClick={() => changeColor('grayBG')} 
-                className={`icons ${color === 'grayBG' ? 'gray' : 'black'}`}
+                className={`pop icons ${color === 'grayBG' ? 'gray' : 'black'}`}
             /> 
             
 
             <FontAwesomeIcon
                 icon={faTimesCircle}
                 onClick={() => handleClick()} 
-                className='icons'
+                className='icons pop'
             />    
         </Popper>
     )

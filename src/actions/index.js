@@ -17,12 +17,20 @@ export const searchTerm = (term) => async dispatch =>{
             q: term
         }
     })
-    dispatch({
-        type: SEARCH_TERM,
-        payload: searchTermResponse.data.items
-    })
-    dispatch(selectCurrentVideo(searchTermResponse.data.items));
-    dispatch(getViewCountList(searchTermResponse.data.items));
+    //success with results
+    if (searchTermResponse.data.items[0]){
+        dispatch({
+            type: SEARCH_TERM,
+            payload: searchTermResponse.data.items
+        })
+        dispatch(selectCurrentVideo(searchTermResponse.data.items));
+        dispatch(getViewCountList(searchTermResponse.data.items));
+    }
+    //success but no results
+    else if (!searchTermResponse.data.items[0]){
+        console.log('hello')
+    }
+    
 };
 
 export const getComments = (id) => async dispatch =>{
@@ -54,13 +62,16 @@ export const getVideoDetails = (id) => async dispatch =>{
 
 export const selectCurrentVideo = (videos) => async dispatch => {
     const selectedVideo = videos.find(video => !video.id.channelId);
-    dispatch ({
-        type: CURRENT_VIDEO,
-        payload: selectedVideo
-    })
-    dispatch(getComments(selectedVideo.id.videoId));
-    dispatch(getVideoDetails(selectedVideo.id.videoId));
-    dispatch(getChannelInfo(selectedVideo.snippet.channelId));
+
+ 
+        dispatch ({
+            type: CURRENT_VIDEO,
+            payload: selectedVideo
+        })
+        dispatch(getComments(selectedVideo.id.videoId));
+        dispatch(getVideoDetails(selectedVideo.id.videoId));
+        dispatch(getChannelInfo(selectedVideo.snippet.channelId));
+    
 } 
 
 export const getChannelInfo = (id) => async dispatch =>{
