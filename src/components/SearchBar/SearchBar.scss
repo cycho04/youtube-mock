@@ -101,3 +101,8 @@
     }
     cursor: pointer;
 }
+
+.term-error {
+    background-color: red !important;
+    transition: 1s ease !important;
+}

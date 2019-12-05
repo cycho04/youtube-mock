@@ -910,5 +910,6 @@ export default {
       }
     }
   ],
-  color: 'white'
+  color: 'white',
+  error: false
 }

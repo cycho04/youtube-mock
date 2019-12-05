@@ -7,6 +7,7 @@ import {
     CHANNEL_INFO,
     VIEW_COUNTS,
     CHANGE_COLOR,
+    SHOW_ERROR,
 } from './types';
 
 
@@ -25,13 +26,21 @@ export const searchTerm = (term) => async dispatch =>{
         })
         dispatch(selectCurrentVideo(searchTermResponse.data.items));
         dispatch(getViewCountList(searchTermResponse.data.items));
+        //reset error status
+        dispatch({
+            type: SHOW_ERROR,
+            payload: false
+        })
     }
     //success but no results
     else if (!searchTermResponse.data.items[0]){
-        console.log('hello')
-    }
-    
+        dispatch({
+            type: SHOW_ERROR,
+            payload: true
+        })
+    }  
 };
+
 
 export const getComments = (id) => async dispatch =>{
     const comments = await youtube.get('/commentThreads', {

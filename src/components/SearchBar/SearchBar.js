@@ -28,13 +28,16 @@ class SearchBar extends React.Component {
     }
     
     render(){
+
+        const { color, error } = this.props;
+
         return (
             <div className='search-bar ui segment'>
                 <div className='ui grid'>
                     <div className='two column row outer-search'>
                         <div className='logoSide'>
                             <div className='inside main-icon' onClick={this.handleClick}>
-                                <h3 className={this.props.color}><i className='large tint icon' />HueTube</h3>       
+                                <h3 className={color}><i className='large tint icon' />HueTube</h3>       
                             </div>
                         </div>
 
@@ -47,7 +50,8 @@ class SearchBar extends React.Component {
                                         type='text'
                                         value={this.state.term}
                                         onChange={this.onInputChange}   
-                                        placeholder='Search' 
+                                        placeholder='Search'
+                                        className={error ? 'term-error' : ''} 
                                     />
                                     <button className='ui button'><i className='search icon' /></button>
                                 </div>
@@ -63,13 +67,14 @@ class SearchBar extends React.Component {
 const mapStateToProps = state => {
     return{
         color: state.color,
+        error: state.error,
     }
 }
 
 SearchBar.propTypes = {
     searchTerm: PropTypes.func,
     color: PropTypes.string,
-
+    error: PropTypes.bool,
 }
 
 export default connect(mapStateToProps, {searchTerm})(SearchBar);            
