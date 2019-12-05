@@ -1,12 +1,13 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {PropTypes} from 'prop-types';
 
 import './VideoList.scss';
 import VideoItem from '../VideoItem/VideoItem';
-import {connect} from 'react-redux';
 
 
-const VideoList = (props) => {
-    const renderedList = props.videos.map((video, index) => {
+const VideoList = ({videos}) => {
+    const renderedList = videos.map((video, index) => {
         return (
             <VideoItem 
                 key={index}
@@ -21,7 +22,6 @@ const VideoList = (props) => {
                 Up next
             </div>
             {renderedList}
-            {/* <button className='ui button fluid'>Does Nothing </button> */}
         </div>
     )
 };
@@ -30,6 +30,10 @@ const mapStateToProps = state => {
     return{
         videos: state.videos
     }
+}
+
+VideoList.propTypes = {
+    videos: PropTypes.array.isRequired,
 }
 
 export default connect(mapStateToProps)(VideoList);

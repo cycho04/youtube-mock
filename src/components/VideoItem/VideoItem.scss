@@ -2,6 +2,14 @@
     max-width: 180px;
 }
 
+.video-item {
+    text-align: left;
+    &:focus {
+        outline:0;
+    }
+    background: transparent;
+}
+
 /*helps .header and .content not wrap.also removes default top border*/
 .overflow {
     white-space: nowrap !important; 
@@ -26,4 +34,6 @@
 
 .text {
     width: 30%;
+    margin-right: 0!important;
+    background: transparent;
 }

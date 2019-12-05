@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+
 import reducers from './reducers';
 import preloadedState from './preloadedState';
-
 import App from './components/App/App';
 
 //redux, redux-thunk, and dev tools set up

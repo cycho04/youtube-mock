@@ -1,12 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Comments from '../Comments/Comments';
-import './VideoDetail.scss';
 import ClampLines from 'react-clamp-lines';
 import {connect} from 'react-redux';
+
+import './VideoDetail.scss';
 import {formatDate} from '../../utils/formatDate';
 import {numShortener} from '../../utils/numShortener';
 
-const VideoDetail = ({publishedAt, videoId, title, viewCount, url, channelTitle, description, commentCount, subscriberCount, color}) => {
+const VideoDetail = props => {
+
+    const {publishedAt, videoId, title, viewCount, url, channelTitle, description, commentCount, subscriberCount, color} = props;
 
     const fullFormattedDate = formatDate(publishedAt);
     
@@ -23,8 +27,8 @@ const VideoDetail = ({publishedAt, videoId, title, viewCount, url, channelTitle,
                 <div className='ui secondary pointing menu'>
                     <div className='item cutLeftPadding'>
                         <div className='content'>
-                            <div className='header spacing'><h3 className={color}>{title}</h3></div>
-                            <div className='meta'><h3 className={color}>{Number(viewCount).toLocaleString()} views</h3></div>
+                            <div className='header spacing'><h3 className={`${color} details-text`}>{title}</h3></div>
+                            <div className='meta'><h3 className={`${color} details-text`}>{Number(viewCount).toLocaleString()} views</h3></div>
                         </div>
                     </div>
                 </div>
@@ -32,11 +36,11 @@ const VideoDetail = ({publishedAt, videoId, title, viewCount, url, channelTitle,
                
                 <div className='ui two column grid'>
                     <div className='ui feed column'>
-                        <div className='ui event'>
+                        <div className='ui event details-text'>
                             <div className='label'><img src={url} alt='Channel Avatar'/></div>
                             <div className='content'>
-                                <div className={`${color} summary`}>{channelTitle}</div>
-                                <div className={`${color}`}>{`Published on ${fullFormattedDate}`}</div>
+                                <div className={`${color} summary details-text`}>{channelTitle}</div>
+                                <div className={`${color} details-text`}>{`Published on ${fullFormattedDate}`}</div>
                                 <div className={`${color} extra`}>
                                     <ClampLines
                                         text={description}
@@ -57,7 +61,7 @@ const VideoDetail = ({publishedAt, videoId, title, viewCount, url, channelTitle,
                     
                 
                 <div className='ui divider font'></div>
-                <h3 className={color}>{Number(commentCount).toLocaleString()} Comments &thinsp; &thinsp; &thinsp; &thinsp; <span className={color}><i className='sort amount up icon'/>SORT BY</span></h3>
+                <h3 className={`${color} details-text`}>{Number(commentCount).toLocaleString()} Comments &thinsp; &thinsp; &thinsp; &thinsp; <span className={color}><i className='sort amount up icon'/>SORT BY</span></h3>
             </div>
             <Comments />
         </div>
@@ -79,6 +83,19 @@ const mapStateToProps = state => {
         commentCount: state.videoDetails.statistics.commentCount,
         color: state.color,
     }
+}
+
+VideoDetail.propTypes = {
+    publishedAt: PropTypes.string, 
+    videoId: PropTypes.string, 
+    title: PropTypes.string, 
+    viewCount: PropTypes.string, 
+    url: PropTypes.string, 
+    channelTitle: PropTypes.string, 
+    description: PropTypes.string, 
+    commentCount: PropTypes.string, 
+    subscriberCount: PropTypes.string,
+    color: PropTypes.string,
 }
 
 export default connect(mapStateToProps, null)(VideoDetail);

@@ -9,6 +9,7 @@ import {
     CHANGE_COLOR,
 } from './types';
 
+
 export const searchTerm = (term) => async dispatch =>{
     const searchTermResponse = await youtube.get('/search', {
         params: {

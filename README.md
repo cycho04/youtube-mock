@@ -1,28 +1,8 @@
 
 
-## Youtube Mock
+## Huetube
 
-- Live Demo: [YouTube Copy](https://my-youtube-mock.herokuapp.com/)
-
-### User Interface
-
-- Search for real Youtube videos and be able to play them.
-
-- Automatically displays and plays the first video on the search list.
-
-- Display real statistical values, as well as real comments, which can be found on the actual Youtube website.
-
+- Live Demo: [HueTube](https://huetube.herokuapp.com/)
 
 ### Video WalkThrough
 ![Test Gif](youtube.gif)
-
-
-### Environment
-
-- Powered by the `YouTube Data API`
-
-- HTTP requests made possible with `axios`
-
-- Bootstrapped with `create-react-app`
-
-- Streaming made with `iframe` and `embedded player`

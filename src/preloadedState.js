@@ -1,10 +1,7 @@
 export default {
   videos: [
     {
-      kind: 'youtube#searchResult',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/BzZidK3YWN82e4rV5B27QRdmdBQ"',
       id: {
-        kind: 'youtube#video',
         videoId: '1JLUn2DFW4w'
       },
       snippet: {
@@ -18,26 +15,17 @@ export default {
             width: 120,
             height: 90
           },
-          medium: {
-            url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/mqdefault.jpg',
-            width: 320,
-            height: 180
+          'medium': {
+            url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/default.jpg',
+            width: 120,
+            height: 90
           },
-          high: {
-            url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/hqdefault.jpg',
-            width: 480,
-            height: 360
-          }
         },
-        channelTitle: 'Netflix',
-        liveBroadcastContent: 'none'
+        channelTitle: 'Netflix'
       }
     },
     {
-      kind: 'youtube#searchResult',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/4xWU1NwHmGdn80jUi-vXneGY0uM"',
       id: {
-        kind: 'youtube#video',
         videoId: '1xqwyudGlPU'
       },
       snippet: {
@@ -51,26 +39,17 @@ export default {
             width: 120,
             height: 90
           },
-          medium: {
-            url: 'https://i.ytimg.com/vi/1xqwyudGlPU/mqdefault.jpg',
-            width: 320,
-            height: 180
-          },
-          high: {
-            url: 'https://i.ytimg.com/vi/1xqwyudGlPU/hqdefault.jpg',
-            width: 480,
-            height: 360
+          'medium': {
+            url: 'https://i.ytimg.com/vi/1xqwyudGlPU/default.jpg',
+            width: 120,
+            height: 90
           }
         },
-        channelTitle: 'Looper',
-        liveBroadcastContent: 'none'
+        channelTitle: 'Looper'
       }
     },
     {
-      kind: 'youtube#searchResult',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/EPtB17qE-rTR2YihpMrPbFxcHgA"',
       id: {
-        kind: 'youtube#video',
         videoId: 'uOwi33Wpmr0'
       },
       snippet: {
@@ -84,26 +63,17 @@ export default {
             width: 120,
             height: 90
           },
-          medium: {
-            url: 'https://i.ytimg.com/vi/uOwi33Wpmr0/mqdefault.jpg',
-            width: 320,
-            height: 180
-          },
-          high: {
-            url: 'https://i.ytimg.com/vi/uOwi33Wpmr0/hqdefault.jpg',
-            width: 480,
-            height: 360
+          'medium': {
+            url: 'https://i.ytimg.com/vi/uOwi33Wpmr0/default.jpg',
+            width: 120,
+            height: 90
           }
         },
         channelTitle: 'Looper',
-        liveBroadcastContent: 'none'
       }
     },
     {
-      kind: 'youtube#searchResult',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/JDeSEFm6M7GzWro-NUunV91qoC8"',
       id: {
-        kind: 'youtube#video',
         videoId: 'iU8SgjZRPxA'
       },
       snippet: {
@@ -117,26 +87,17 @@ export default {
             width: 120,
             height: 90
           },
-          medium: {
-            url: 'https://i.ytimg.com/vi/iU8SgjZRPxA/mqdefault.jpg',
-            width: 320,
-            height: 180
-          },
-          high: {
-            url: 'https://i.ytimg.com/vi/iU8SgjZRPxA/hqdefault.jpg',
-            width: 480,
-            height: 360
+          'medium': {
+            url: 'https://i.ytimg.com/vi/iU8SgjZRPxA/default.jpg',
+            width: 120,
+            height: 90
           }
         },
         channelTitle: 'Netflix',
-        liveBroadcastContent: 'none'
       }
     },
     {
-      kind: 'youtube#searchResult',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/LIORs_-VDJXytmA0niYWKjXOXds"',
       id: {
-        kind: 'youtube#video',
         videoId: 'lZKqMVPlDg8'
       },
       snippet: {
@@ -150,26 +111,17 @@ export default {
             width: 120,
             height: 90
           },
-          medium: {
-            url: 'https://i.ytimg.com/vi/lZKqMVPlDg8/mqdefault.jpg',
-            width: 320,
-            height: 180
-          },
-          high: {
-            url: 'https://i.ytimg.com/vi/lZKqMVPlDg8/hqdefault.jpg',
-            width: 480,
-            height: 360
+          'medium': {
+            url: 'https://i.ytimg.com/vi/lZKqMVPlDg8/default.jpg',
+            width: 120,
+            height: 90
           }
         },
         channelTitle: 'Netflix',
-        liveBroadcastContent: 'none'
       }
     },
     {
-      kind: 'youtube#searchResult',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/mi657Cistr9E8gHMYQ2HaV8AeXo"',
       id: {
-        kind: 'youtube#video',
         videoId: 'FbRL0fWr-08'
       },
       snippet: {
@@ -183,26 +135,17 @@ export default {
             width: 120,
             height: 90
           },
-          medium: {
-            url: 'https://i.ytimg.com/vi/FbRL0fWr-08/mqdefault.jpg',
-            width: 320,
-            height: 180
-          },
-          high: {
-            url: 'https://i.ytimg.com/vi/FbRL0fWr-08/hqdefault.jpg',
-            width: 480,
-            height: 360
+          'medium': {
+            url: 'https://i.ytimg.com/vi/FbRL0fWr-08/default.jpg',
+            width: 120,
+            height: 90
           }
         },
         channelTitle: 'Let Me Explain',
-        liveBroadcastContent: 'none'
       }
     },
     {
-      kind: 'youtube#searchResult',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/vgfJb2jYGsDJem3uvNcV6xdfTIs"',
       id: {
-        kind: 'youtube#video',
         videoId: 'Yhjs8B_Wxl8'
       },
       snippet: {
@@ -216,26 +159,17 @@ export default {
             width: 120,
             height: 90
           },
-          medium: {
-            url: 'https://i.ytimg.com/vi/Yhjs8B_Wxl8/mqdefault.jpg',
-            width: 320,
-            height: 180
-          },
-          high: {
-            url: 'https://i.ytimg.com/vi/Yhjs8B_Wxl8/hqdefault.jpg',
-            width: 480,
-            height: 360
+          'medium': {
+            url: 'https://i.ytimg.com/vi/FbRL0fWr-08/default.jpg',
+            width: 120,
+            height: 90
           }
         },
         channelTitle: 'Movieclips Trailers',
-        liveBroadcastContent: 'none'
       }
     },
     {
-      kind: 'youtube#searchResult',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/9lvRI068CJbHfHaF3-A4uybPw-8"',
       id: {
-        kind: 'youtube#video',
         videoId: 'i5YFJiHooXM'
       },
       snippet: {
@@ -249,26 +183,17 @@ export default {
             width: 120,
             height: 90
           },
-          medium: {
-            url: 'https://i.ytimg.com/vi/i5YFJiHooXM/mqdefault.jpg',
-            width: 320,
-            height: 180
-          },
-          high: {
-            url: 'https://i.ytimg.com/vi/i5YFJiHooXM/hqdefault.jpg',
-            width: 480,
-            height: 360
+          'medium': {
+            url: 'https://i.ytimg.com/vi/FbRL0fWr-08/default.jpg',
+            width: 120,
+            height: 90
           }
         },
         channelTitle: 'Looper',
-        liveBroadcastContent: 'none'
       }
     },
     {
-      kind: 'youtube#searchResult',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/DkYUu3u_XywDXTmH36FWUUOZjv4"',
       id: {
-        kind: 'youtube#video',
         videoId: 'CpKN8AVp4BM'
       },
       snippet: {
@@ -282,26 +207,17 @@ export default {
             width: 120,
             height: 90
           },
-          medium: {
-            url: 'https://i.ytimg.com/vi/CpKN8AVp4BM/mqdefault.jpg',
-            width: 320,
-            height: 180
-          },
-          high: {
-            url: 'https://i.ytimg.com/vi/CpKN8AVp4BM/hqdefault.jpg',
-            width: 480,
-            height: 360
+          'medium': {
+            url: 'https://i.ytimg.com/vi/CpKN8AVp4BM/default.jpg',
+            width: 120,
+            height: 90
           }
         },
         channelTitle: 'WatchMojo.com',
-        liveBroadcastContent: 'none'
       }
     },
     {
-      kind: 'youtube#searchResult',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/Sj5zg6Dv4CVf4raCQ3dukBM9wp0"',
       id: {
-        kind: 'youtube#video',
         videoId: 'Xw7Aii1Fyq4'
       },
       snippet: {
@@ -315,26 +231,18 @@ export default {
             width: 120,
             height: 90
           },
-          medium: {
-            url: 'https://i.ytimg.com/vi/Xw7Aii1Fyq4/mqdefault.jpg',
-            width: 320,
-            height: 180
-          },
-          high: {
-            url: 'https://i.ytimg.com/vi/Xw7Aii1Fyq4/hqdefault.jpg',
-            width: 480,
-            height: 360
+          'medium': {
+            url: 'https://i.ytimg.com/vi/Xw7Aii1Fyq4/default.jpg',
+            width: 120,
+            height: 90
           }
         },
         channelTitle: 'Netflix',
-        liveBroadcastContent: 'none'
       }
     }
   ],
   comments: [
     {
-      kind: 'youtube#commentThread',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/CkN7IWxL-HnlmbBErh1E9RthOD0"',
       id: 'UgxeglTlF9sAg5v7Z_J4AaABAg',
       snippet: {
         videoId: '1JLUn2DFW4w',
@@ -366,8 +274,6 @@ export default {
       replies: {
         comments: [
           {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/1aTmPgF-p9qXmX9RCwGcstkcQWY"',
             id: 'UgxeglTlF9sAg5v7Z_J4AaABAg.9-GkXstJlwa91YrC2cmd7p',
             snippet: {
               authorDisplayName: 'Ash Vanhelsing',
@@ -386,101 +292,11 @@ export default {
               publishedAt: '2019-11-20T10:17:02.000Z',
               updatedAt: '2019-11-20T10:17:02.000Z'
             }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/7jsBamxWoCN4vy3YamVGJY__LiQ"',
-            id: 'UgxeglTlF9sAg5v7Z_J4AaABAg.9-GkXstJlwa91XGtDoRIk7',
-            snippet: {
-              authorDisplayName: 'The Truth hurts',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l78NoYenaFoaeCteruZOQ-Q2JirOI6VaWT8pvA=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCtQqiENuRwQjB_vuEPDxeww',
-              authorChannelId: {
-                value: 'UCtQqiENuRwQjB_vuEPDxeww'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Lorcan white people problems',
-              textOriginal: 'Lorcan white people problems',
-              parentId: 'UgxeglTlF9sAg5v7Z_J4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-19T19:31:46.000Z',
-              updatedAt: '2019-11-19T19:31:46.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/TkIdEohPJfN_DEdA20QLdDB0EQI"',
-            id: 'UgxeglTlF9sAg5v7Z_J4AaABAg.9-GkXstJlwa91TudRinNgP',
-            snippet: {
-              authorDisplayName: 'Tomass Vilnis',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7_Wglpmx3txL_6vfLxZGO_wZPWjy7hfFkLNGw=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UC09XN_FXeuH0pHeJyxoxrBA',
-              authorChannelId: {
-                value: 'UC09XN_FXeuH0pHeJyxoxrBA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: '@Steven Rice i wish i could be as cool as you',
-              textOriginal: '@Steven Rice i wish i could be as cool as you',
-              parentId: 'UgxeglTlF9sAg5v7Z_J4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-18T12:10:55.000Z',
-              updatedAt: '2019-11-18T12:10:55.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/x-rBeKMl2uqc6eVEPR-oojpYZ-E"',
-            id: 'UgxeglTlF9sAg5v7Z_J4AaABAg.9-GkXstJlwa91SqFDxMi0s',
-            snippet: {
-              authorDisplayName: 'Michael Whitehead',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l79Z6ITfEuFy3weDfZjzfV4Y2qxK3XSnp_X37Q=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UC-PGLnyRYKvEAaE5m6QFzTA',
-              authorChannelId: {
-                value: 'UC-PGLnyRYKvEAaE5m6QFzTA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Your a moron and only reason I&#39;m even replying is cuz I realized how many idiots liked your dumb ass comment',
-              textOriginal: 'Your a moron and only reason I\'m even replying is cuz I realized how many idiots liked your dumb ass comment',
-              parentId: 'UgxeglTlF9sAg5v7Z_J4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-18T02:13:17.000Z',
-              updatedAt: '2019-11-18T02:13:17.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/2DRfNLyzbKkzRnje7rywi5Uo2I4"',
-            id: 'UgxeglTlF9sAg5v7Z_J4AaABAg.9-GkXstJlwa91QCFJ5b4zp',
-            snippet: {
-              authorDisplayName: 'Just Curious',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7_1y0teS3sdRrpbZUr0ghNoFRk4pI8I8KW34Q=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UC_Q_lPWHnTx5xcS-7P3WenA',
-              authorChannelId: {
-                value: 'UC_Q_lPWHnTx5xcS-7P3WenA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Nop... stoped after 1 hour waisting my time. It was well done. bad no real excite story....',
-              textOriginal: 'Nop... stoped after 1 hour waisting my time. It was well done. bad no real excite story....',
-              parentId: 'UgxeglTlF9sAg5v7Z_J4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-17T01:36:33.000Z',
-              updatedAt: '2019-11-17T01:36:33.000Z'
-            }
           }
         ]
       }
     },
     {
-      kind: 'youtube#commentThread',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/J3eDQ1pe4z48OpO8TFD3rKxjOY0"',
       id: 'Ugwlio_sszY1ngb5vHp4AaABAg',
       snippet: {
         videoId: '1JLUn2DFW4w',
@@ -512,8 +328,6 @@ export default {
       replies: {
         comments: [
           {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/57mAyu0sYKNHdhp_iZyO-uJQHrg"',
             id: 'Ugwlio_sszY1ngb5vHp4AaABAg.9-zqo1YfY-y91YHTql716c',
             snippet: {
               authorDisplayName: 'Niall Patterson',
@@ -532,101 +346,11 @@ export default {
               publishedAt: '2019-11-20T04:56:09.000Z',
               updatedAt: '2019-11-20T04:56:09.000Z'
             }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/KMKb5S8YhU8370cmftKWLrNzImo"',
-            id: 'Ugwlio_sszY1ngb5vHp4AaABAg.9-zqo1YfY-y91X9Er6w4wS',
-            snippet: {
-              authorDisplayName: 'mario canka',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l79F6QdUPiU1AmT4XOyLSA-COqvAkiH6mKLcjQ=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCcpGFIPCwNSwXHzSiUNS9GA',
-              authorChannelId: {
-                value: 'UCcpGFIPCwNSwXHzSiUNS9GA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Every minute',
-              textOriginal: 'Every minute',
-              parentId: 'Ugwlio_sszY1ngb5vHp4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 1,
-              publishedAt: '2019-11-19T18:24:57.000Z',
-              updatedAt: '2019-11-19T18:24:57.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/E1htU9y5PjplcuWvcFKCYSGQbN4"',
-            id: 'Ugwlio_sszY1ngb5vHp4AaABAg.9-zqo1YfY-y91O6NLA3ksY',
-            snippet: {
-              authorDisplayName: 'adil mohamed',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7_7mN5XQOUBmrhtDj13n7ABkGoNl34ZZDRR5Q=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCJlh-g5zq-iPRoWjqmc-VHg',
-              authorChannelId: {
-                value: 'UCJlh-g5zq-iPRoWjqmc-VHg'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Yes more?',
-              textOriginal: 'Yes more?',
-              parentId: 'Ugwlio_sszY1ngb5vHp4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 1,
-              publishedAt: '2019-11-16T06:06:44.000Z',
-              updatedAt: '2019-11-16T06:06:44.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/pCV2M9MT6wqN51MolgfZ3Iqjli8"',
-            id: 'Ugwlio_sszY1ngb5vHp4AaABAg.9-zqo1YfY-y90qR7AjYiLJ',
-            snippet: {
-              authorDisplayName: 'TET - COM',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l790xHUh119kNdbOcxKFNM-vRxuMLIc80OtJgw=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UC7f8InlxCNnOFgC0VNkFicw',
-              authorChannelId: {
-                value: 'UC7f8InlxCNnOFgC0VNkFicw'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Actually no,because I was very satisfied with how it all played out...',
-              textOriginal: 'Actually no,because I was very satisfied with how it all played out...',
-              parentId: 'Ugwlio_sszY1ngb5vHp4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 3,
-              publishedAt: '2019-11-02T18:54:36.000Z',
-              updatedAt: '2019-11-02T18:54:36.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/cK3B--3hQlxUBcNQANYRXKDwMwI"',
-            id: 'Ugwlio_sszY1ngb5vHp4AaABAg.9-zqo1YfY-y90o9w_9yHmf',
-            snippet: {
-              authorDisplayName: 'Yaseen Ali',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7-P13yoB0cuvmwiklOHn2Bl3p67ELVUg6HnlQ=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCFwLjRrTYR4Jj-sWEs7s3lg',
-              authorChannelId: {
-                value: 'UCFwLjRrTYR4Jj-sWEs7s3lg'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Honestly, I felt at peace',
-              textOriginal: 'Honestly, I felt at peace',
-              parentId: 'Ugwlio_sszY1ngb5vHp4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 3,
-              publishedAt: '2019-11-01T21:46:00.000Z',
-              updatedAt: '2019-11-01T21:46:00.000Z'
-            }
           }
         ]
       }
     },
     {
-      kind: 'youtube#commentThread',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/Al1qu_TB1HYFrxVxBzUg9I09dTk"',
       id: 'UgyIDKCz_nl8TvrHl354AaABAg',
       snippet: {
         videoId: '1JLUn2DFW4w',
@@ -658,8 +382,6 @@ export default {
       replies: {
         comments: [
           {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/pVkcvDi4asRxAVO9yxY6cz9CMA4"',
             id: 'UgyIDKCz_nl8TvrHl354AaABAg.90ALZqZTOSC91Y8ODvvF5E',
             snippet: {
               authorDisplayName: 'Donald Trump',
@@ -678,57 +400,11 @@ export default {
               publishedAt: '2019-11-20T03:36:44.000Z',
               updatedAt: '2019-11-20T03:36:44.000Z'
             }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/anHZtz7wQvHJXuHGkb_u8lfHpHk"',
-            id: 'UgyIDKCz_nl8TvrHl354AaABAg.90ALZqZTOSC91KJ0zfTG4Q',
-            snippet: {
-              authorDisplayName: 'Walter White',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7_BBtu11j1F3R6RTymdIRkTmPC4yJroUXheqA=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCyNxjRqfX3s_vk1-3deCNVQ',
-              authorChannelId: {
-                value: 'UCyNxjRqfX3s_vk1-3deCNVQ'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Like two testecles',
-              textOriginal: 'Like two testecles',
-              parentId: 'UgyIDKCz_nl8TvrHl354AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-14T18:40:19.000Z',
-              updatedAt: '2019-11-14T18:40:19.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/e4O_xNn5LVNnIbmKYuNmqL10o5A"',
-            id: 'UgyIDKCz_nl8TvrHl354AaABAg.90ALZqZTOSC90uKfKqRFe1',
-            snippet: {
-              authorDisplayName: 'baba yaga',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7_VoZGa-v1F7QbdZZ5lYxId60drZdomcDs7uQ=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCsQZtMmDpT1pVl_v_E3ebaA',
-              authorChannelId: {
-                value: 'UCsQZtMmDpT1pVl_v_E3ebaA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Then i will be your combo',
-              textOriginal: 'Then i will be your combo',
-              parentId: 'UgyIDKCz_nl8TvrHl354AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-04T07:15:12.000Z',
-              updatedAt: '2019-11-04T07:15:12.000Z'
-            }
           }
         ]
       }
     },
     {
-      kind: 'youtube#commentThread',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/582FyVwMuNWzIpfr02wUie--hXE"',
       id: 'UgzJtjtWQI_FIGRj1px4AaABAg',
       snippet: {
         videoId: '1JLUn2DFW4w',
@@ -760,8 +436,6 @@ export default {
       replies: {
         comments: [
           {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/ZHoc8poK0l99lAjx4DJrv93JCT0"',
             id: 'UgzJtjtWQI_FIGRj1px4AaABAg.909AYWHz-HG91YuOgZpoRs',
             snippet: {
               authorDisplayName: 'JOSEPH THISTLE',
@@ -780,101 +454,11 @@ export default {
               publishedAt: '2019-11-20T10:44:58.000Z',
               updatedAt: '2019-11-20T10:44:58.000Z'
             }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/19bWZ3-8HRxPHvzZCOCupXtbt4E"',
-            id: 'UgzJtjtWQI_FIGRj1px4AaABAg.909AYWHz-HG91XAc7_vnGq',
-            snippet: {
-              authorDisplayName: 'Priisxm 1337',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l79-kikpZF-_h-_befMCH6guSJ4rqXuvAs75HA=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCkN-eIpyDVG0tRuccBE0-bQ',
-              authorChannelId: {
-                value: 'UCkN-eIpyDVG0tRuccBE0-bQ'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'mario canka yeah :(',
-              textOriginal: 'mario canka yeah :(',
-              parentId: 'UgzJtjtWQI_FIGRj1px4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-19T18:37:00.000Z',
-              updatedAt: '2019-11-19T18:37:00.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/QLc2XdAI9ceHdJA2cCjRW1bpoMA"',
-            id: 'UgzJtjtWQI_FIGRj1px4AaABAg.909AYWHz-HG91X98wv7SXo',
-            snippet: {
-              authorDisplayName: 'mario canka',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l79F6QdUPiU1AmT4XOyLSA-COqvAkiH6mKLcjQ=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCcpGFIPCwNSwXHzSiUNS9GA',
-              authorChannelId: {
-                value: 'UCcpGFIPCwNSwXHzSiUNS9GA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Im sad its over now... For real. No more breaking bad',
-              textOriginal: 'Im sad its over now... For real. No more breaking bad',
-              parentId: 'UgzJtjtWQI_FIGRj1px4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-19T18:24:09.000Z',
-              updatedAt: '2019-11-19T18:24:09.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/BGdg_WfssJEaTJkS5HxXNS0gKLA"',
-            id: 'UgzJtjtWQI_FIGRj1px4AaABAg.909AYWHz-HG91V65o1E4xr',
-            snippet: {
-              authorDisplayName: 'JOSEPH THISTLE',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l78Zl1JhO_qU6A3m8sbIWq4KmkHffoe8u6vdyw=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCgUj_8KcweTN2pLoqb-UwIg',
-              authorChannelId: {
-                value: 'UCgUj_8KcweTN2pLoqb-UwIg'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: '@Brandon Renner yes u r right soprano&#39;s did the same its hard finding good shows to watch',
-              textOriginal: '@Brandon Renner yes u r right soprano\'s did the same its hard finding good shows to watch',
-              parentId: 'UgzJtjtWQI_FIGRj1px4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 1,
-              publishedAt: '2019-11-18T23:19:01.000Z',
-              updatedAt: '2019-11-18T23:19:01.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/RDieN84pReH4ivIw-rlyzWaSKXE"',
-            id: 'UgzJtjtWQI_FIGRj1px4AaABAg.909AYWHz-HG91UWe99kzcT',
-            snippet: {
-              authorDisplayName: 'Brandon Renner',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l78NzkQzUBMb0kokQRBOXkOX5T9MsDKSZs-LoQ=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCEdY6QhNc6pxVQd_2XYh3JQ',
-              authorChannelId: {
-                value: 'UCEdY6QhNc6pxVQd_2XYh3JQ'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: '@JOSEPH THISTLE All great things must come to an end. Breaking Bad was a masterpiece because it didn&#39;t overstay it&#39;s welcome like other shows (the walking dead lol). It told it&#39;s story in an efficient and continuously engaging way and wrapped up perfectly.',
-              textOriginal: '@JOSEPH THISTLE All great things must come to an end. Breaking Bad was a masterpiece because it didn\'t overstay it\'s welcome like other shows (the walking dead lol). It told it\'s story in an efficient and continuously engaging way and wrapped up perfectly.',
-              parentId: 'UgzJtjtWQI_FIGRj1px4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 1,
-              publishedAt: '2019-11-18T17:51:48.000Z',
-              updatedAt: '2019-11-18T17:52:11.000Z'
-            }
           }
         ]
       }
     },
     {
-      kind: 'youtube#commentThread',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/f82YwZLFS6rkQwSNyLQ5u7W0p-E"',
       id: 'UgwgMHAUe0KVlx9ZFoJ4AaABAg',
       snippet: {
         videoId: '1JLUn2DFW4w',
@@ -906,8 +490,6 @@ export default {
       replies: {
         comments: [
           {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/fwsE9pMKce8Y1tMBtQx8wRktDCM"',
             id: 'UgwgMHAUe0KVlx9ZFoJ4AaABAg.90fKB2-9MGJ91bBmv_NoNv',
             snippet: {
               authorDisplayName: 'Mrs. Riggs',
@@ -926,79 +508,11 @@ export default {
               publishedAt: '2019-11-21T17:23:25.000Z',
               updatedAt: '2019-11-21T17:23:25.000Z'
             }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/m9cGserN28q_TMHIxf3RIr1uxtQ"',
-            id: 'UgwgMHAUe0KVlx9ZFoJ4AaABAg.90fKB2-9MGJ913egkaHTIX',
-            snippet: {
-              authorDisplayName: 'Seth Steele',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l785qC7GZNt_Gz7UMeOvPQuV-T-YwHQD3lqa4Q=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCsJihu5Q6cFk4K_tW9FZJPw',
-              authorChannelId: {
-                value: 'UCsJihu5Q6cFk4K_tW9FZJPw'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'me to my mom when she&#39;s asked what breaking bad was.',
-              textOriginal: 'me to my mom when she\'s asked what breaking bad was.',
-              parentId: 'UgwgMHAUe0KVlx9ZFoJ4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 3,
-              publishedAt: '2019-11-08T07:31:18.000Z',
-              updatedAt: '2019-11-08T07:31:18.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/CgaO5u103tSgm0Qr_R3Xcnm3v2g"',
-            id: 'UgwgMHAUe0KVlx9ZFoJ4AaABAg.90fKB2-9MGJ90ya-QMX_I9',
-            snippet: {
-              authorDisplayName: 'WĦM \u200e’',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7-vY-zLTp--3DYrJLEa6VVI5a9b7fP7gx-_uQ=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCl5vr57p84jBOS-lHlQvWmg',
-              authorChannelId: {
-                value: 'UCl5vr57p84jBOS-lHlQvWmg'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Mrs. Riggs 😂😂😂😂😂😂😂',
-              textOriginal: 'Mrs. Riggs 😂😂😂😂😂😂😂',
-              parentId: 'UgwgMHAUe0KVlx9ZFoJ4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 3,
-              publishedAt: '2019-11-05T22:54:51.000Z',
-              updatedAt: '2019-11-05T22:54:51.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/S_8W_fupO0pHC_Q5rtRALx1VOyQ"',
-            id: 'UgwgMHAUe0KVlx9ZFoJ4AaABAg.90fKB2-9MGJ90t9ox1pFpT',
-            snippet: {
-              authorDisplayName: 'Rareş Minuț',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7_Cgj_LFeb4ESjIyQq0BZhqEtPsstEJYIY9=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UC0XrNB1y_GjC07T0wgR5eew',
-              authorChannelId: {
-                value: 'UC0XrNB1y_GjC07T0wgR5eew'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Underrated comment :))))',
-              textOriginal: 'Underrated comment :))))',
-              parentId: 'UgwgMHAUe0KVlx9ZFoJ4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 5,
-              publishedAt: '2019-11-03T20:21:09.000Z',
-              updatedAt: '2019-11-03T20:21:09.000Z'
-            }
           }
         ]
       }
     },
     {
-      kind: 'youtube#commentThread',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/HpWsyxtwoy14bN_GnZKWYv8xgtk"',
       id: 'Ugw2Eu5d145osNy_lTB4AaABAg',
       snippet: {
         videoId: '1JLUn2DFW4w',
@@ -1055,8 +569,6 @@ export default {
       }
     },
     {
-      kind: 'youtube#commentThread',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/6SKv_h9cvzZUSL-0Q1eSnxjcxok"',
       id: 'UgwdyTLeyiDbzmrly6B4AaABAg',
       snippet: {
         videoId: '1JLUn2DFW4w',
@@ -1088,8 +600,6 @@ export default {
       replies: {
         comments: [
           {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/_8nd2F3OEiNHNRuTX4qErtdsKwc"',
             id: 'UgwdyTLeyiDbzmrly6B4AaABAg.90-GjG__kNW91W1HQSDuDR',
             snippet: {
               authorDisplayName: 'Twotonecy',
@@ -1108,101 +618,11 @@ export default {
               publishedAt: '2019-11-19T07:56:09.000Z',
               updatedAt: '2019-11-19T07:56:09.000Z'
             }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/JUsCM-dz4rBuPY-tvTigrZoCmvU"',
-            id: 'UgwdyTLeyiDbzmrly6B4AaABAg.90-GjG__kNW91IFxLjmsVX',
-            snippet: {
-              authorDisplayName: 'Bayley Martin',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7_0fsovopoHJouP8vWwcBB11LnwKLsHONhqbA=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UChxvYTYcztOWIMFpeeh0aQQ',
-              authorChannelId: {
-                value: 'UChxvYTYcztOWIMFpeeh0aQQ'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'BITCH',
-              textOriginal: 'BITCH',
-              parentId: 'UgwdyTLeyiDbzmrly6B4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-13T23:34:59.000Z',
-              updatedAt: '2019-11-13T23:34:59.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/WE1PR62Ic9LLDIFAvXAeTRGnL84"',
-            id: 'UgwdyTLeyiDbzmrly6B4AaABAg.90-GjG__kNW90qS7wPfuvp',
-            snippet: {
-              authorDisplayName: 'TET - COM',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l790xHUh119kNdbOcxKFNM-vRxuMLIc80OtJgw=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UC7f8InlxCNnOFgC0VNkFicw',
-              authorChannelId: {
-                value: 'UC7f8InlxCNnOFgC0VNkFicw'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'So touching,yet horribly sad.....this film is an artistic masterpiece',
-              textOriginal: 'So touching,yet horribly sad.....this film is an artistic masterpiece',
-              parentId: 'UgwdyTLeyiDbzmrly6B4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 1,
-              publishedAt: '2019-11-02T19:03:27.000Z',
-              updatedAt: '2019-11-02T19:03:27.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/ddHBXvmVNpvYbtU0bdH1ddZLeRk"',
-            id: 'UgwdyTLeyiDbzmrly6B4AaABAg.90-GjG__kNW906ywGDYCQN',
-            snippet: {
-              authorDisplayName: 'Ranj Hama Salih',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l79LHXTxgEKN7MK0yOE6EsbgOfdB_qJM16th=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCJdWA_ZkE7Hr02HhWr6Zn_g',
-              authorChannelId: {
-                value: 'UCJdWA_ZkE7Hr02HhWr6Zn_g'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: '@White Dove does he? I mean think about it, he has a rich character, a new identity, a good amount of money, and a chance to a fresh start, i mean, isn&#39;t that what we all crave? Didn&#39;t you ever wish for such a thing?',
-              textOriginal: '@White Dove does he? I mean think about it, he has a rich character, a new identity, a good amount of money, and a chance to a fresh start, i mean, isn\'t that what we all crave? Didn\'t you ever wish for such a thing?',
-              parentId: 'UgwdyTLeyiDbzmrly6B4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 11,
-              publishedAt: '2019-10-15T17:54:31.000Z',
-              updatedAt: '2019-10-15T17:54:31.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/UFB8QSpl4Vh8eMiPtzjQJdYG8aY"',
-            id: 'UgwdyTLeyiDbzmrly6B4AaABAg.90-GjG__kNW904oblUcaPh',
-            snippet: {
-              authorDisplayName: 'White Dove',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7-cf1CsT_b9stfVcvh7UGLpLA9_9atbYXtlwQ=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCS-Idpuqqxj4TWpocWAT_Ng',
-              authorChannelId: {
-                value: 'UCS-Idpuqqxj4TWpocWAT_Ng'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'You mean be totured Btch.! Lol. <br /><br />Im sure he regrets everything.',
-              textOriginal: 'You mean be totured Btch.! Lol. \n\nIm sure he regrets everything.',
-              parentId: 'UgwdyTLeyiDbzmrly6B4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 3,
-              publishedAt: '2019-10-14T21:45:51.000Z',
-              updatedAt: '2019-10-14T21:45:51.000Z'
-            }
           }
         ]
       }
     },
     {
-      kind: 'youtube#commentThread',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/b_ajXaUZtwWk8oKZwuiwWwTjqvg"',
       id: 'Ugx6LiaelGwnUzlNAx54AaABAg',
       snippet: {
         videoId: '1JLUn2DFW4w',
@@ -1234,8 +654,6 @@ export default {
       replies: {
         comments: [
           {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/rbExPDyxDiupjw8tEgM1NRINEg4"',
             id: 'Ugx6LiaelGwnUzlNAx54AaABAg.90Ae7ylDkDW91Xv1XzTYIV',
             snippet: {
               authorDisplayName: 'Unskilled Boss87',
@@ -1254,79 +672,11 @@ export default {
               publishedAt: '2019-11-20T01:31:18.000Z',
               updatedAt: '2019-11-20T01:31:18.000Z'
             }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/4ajsGKvgZwvlJ5wA_k0j0ZywXOw"',
-            id: 'Ugx6LiaelGwnUzlNAx54AaABAg.90Ae7ylDkDW919hj89TNCQ',
-            snippet: {
-              authorDisplayName: 'Noumqn',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l78j7pesD1NVpVumN2zobes-4tE_TP3ZVD6lFg=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCFmK9QxG4XZhEtZD-5hP3EQ',
-              authorChannelId: {
-                value: 'UCFmK9QxG4XZhEtZD-5hP3EQ'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'You&#39;re goddamn right',
-              textOriginal: 'You\'re goddamn right',
-              parentId: 'Ugx6LiaelGwnUzlNAx54AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-10T15:53:17.000Z',
-              updatedAt: '2019-11-10T15:53:17.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/la3GImyPNv6tCKB7ToW7sz_-5sI"',
-            id: 'Ugx6LiaelGwnUzlNAx54AaABAg.90Ae7ylDkDW919DS33aktc',
-            snippet: {
-              authorDisplayName: 'The Flower of Spades',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l78R3oc1HxpQ3gMepMTl3BFHRdT-YwalqQ38DA=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCywYno-9nvEM-uRpQz-fROA',
-              authorChannelId: {
-                value: 'UCywYno-9nvEM-uRpQz-fROA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Justin Bobby season 4 and 5 are one of the two best seasons of television, you have seen nothing yet',
-              textOriginal: 'Justin Bobby season 4 and 5 are one of the two best seasons of television, you have seen nothing yet',
-              parentId: 'Ugx6LiaelGwnUzlNAx54AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-10T11:19:56.000Z',
-              updatedAt: '2019-11-10T11:19:56.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/4JB8qNkJV-iGBMB575gppS7jTss"',
-            id: 'Ugx6LiaelGwnUzlNAx54AaABAg.90Ae7ylDkDW919CFJH5ZlX',
-            snippet: {
-              authorDisplayName: 'The Flower of Spades',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l78R3oc1HxpQ3gMepMTl3BFHRdT-YwalqQ38DA=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCywYno-9nvEM-uRpQz-fROA',
-              authorChannelId: {
-                value: 'UCywYno-9nvEM-uRpQz-fROA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Justin Bobby No',
-              textOriginal: 'Justin Bobby No',
-              parentId: 'Ugx6LiaelGwnUzlNAx54AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 0,
-              publishedAt: '2019-11-10T11:09:27.000Z',
-              updatedAt: '2019-11-10T11:09:27.000Z'
-            }
           }
         ]
       }
     },
     {
-      kind: 'youtube#commentThread',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/u1xQUQHJQWRJIy2W3h1XGbq8kVo"',
       id: 'UgxcPQmCkM-WFg7-DQx4AaABAg',
       snippet: {
         videoId: '1JLUn2DFW4w',
@@ -1358,8 +708,6 @@ export default {
       replies: {
         comments: [
           {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/qBY9AcZUGJwVNH6AWvoyXRHtB7I"',
             id: 'UgxcPQmCkM-WFg7-DQx4AaABAg.900mOAzjBne91L7jZl0735',
             snippet: {
               authorDisplayName: 'Dan J',
@@ -1378,79 +726,11 @@ export default {
               publishedAt: '2019-11-15T02:20:55.000Z',
               updatedAt: '2019-11-15T02:20:55.000Z'
             }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/4D6s0mkBgJKbF2LtWQ6T5LefNEc"',
-            id: 'UgxcPQmCkM-WFg7-DQx4AaABAg.900mOAzjBne90JhRZYMbZv',
-            snippet: {
-              authorDisplayName: 'Jigoku',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l78hvTKF4F2H0OM7To27A9BUUBXqiSP5AjdICA=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCaeoqdDIlqpKa35KX-k-CMQ',
-              authorChannelId: {
-                value: 'UCaeoqdDIlqpKa35KX-k-CMQ'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'bson 1009 Jesse was a junkie, too, though. Basically, we need friends who went through the same shit we did',
-              textOriginal: 'bson 1009 Jesse was a junkie, too, though. Basically, we need friends who went through the same shit we did',
-              parentId: 'UgxcPQmCkM-WFg7-DQx4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 5,
-              publishedAt: '2019-10-20T16:31:46.000Z',
-              updatedAt: '2019-10-20T16:31:46.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/YbwpKbG_TfePmOrsKdBVgFHcnds"',
-            id: 'UgxcPQmCkM-WFg7-DQx4AaABAg.900mOAzjBne90JRrngF02u',
-            snippet: {
-              authorDisplayName: 'bson 1009',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7-mmXcJIfnMuPN-7wIhjQ7KolKat_f8pWus0g=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCbEO_e0DnE1oMpWyyYyMmEA',
-              authorChannelId: {
-                value: 'UCbEO_e0DnE1oMpWyyYyMmEA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Except without the junkie part',
-              textOriginal: 'Except without the junkie part',
-              parentId: 'UgxcPQmCkM-WFg7-DQx4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 1,
-              publishedAt: '2019-10-20T14:06:56.000Z',
-              updatedAt: '2019-10-20T14:06:56.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/M3VAAkVEVNIqctXV3I327B2bi34"',
-            id: 'UgxcPQmCkM-WFg7-DQx4AaABAg.900mOAzjBne90E8db5oPiZ',
-            snippet: {
-              authorDisplayName: 'El Zero M',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7_2vyuXmgfuguuroUBDXNejErSqz-157R0J0Q=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCGHBK7xWCvwPhaYK4UgO8gA',
-              authorChannelId: {
-                value: 'UCGHBK7xWCvwPhaYK4UgO8gA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'R.I.P combo!',
-              textOriginal: 'R.I.P combo!',
-              parentId: 'UgxcPQmCkM-WFg7-DQx4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 4,
-              publishedAt: '2019-10-18T12:42:46.000Z',
-              updatedAt: '2019-10-18T12:42:46.000Z'
-            }
           }
         ]
       }
     },
     {
-      kind: 'youtube#commentThread',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/yScvNP_Sj1ljEyNDxeKtsuR1mEQ"',
       id: 'UgxhF1SNssVOvWVxkUJ4AaABAg',
       snippet: {
         videoId: '1JLUn2DFW4w',
@@ -1482,8 +762,6 @@ export default {
       replies: {
         comments: [
           {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/G1QpLWJq3gdUhALfz3O3qwcGQaw"',
             id: 'UgxhF1SNssVOvWVxkUJ4AaABAg.905IauHasfV90FOuEiogGC',
             snippet: {
               authorDisplayName: 'Jovan Zepeda',
@@ -1502,80 +780,12 @@ export default {
               publishedAt: '2019-10-19T00:24:05.000Z',
               updatedAt: '2019-10-19T00:24:05.000Z'
             }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/0ONtKU7AEi-lq4fN-_J8_w-vIEg"',
-            id: 'UgxhF1SNssVOvWVxkUJ4AaABAg.905IauHasfV90CnZIpDQJ3',
-            snippet: {
-              authorDisplayName: 'The Flower of Spades',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l78R3oc1HxpQ3gMepMTl3BFHRdT-YwalqQ38DA=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCywYno-9nvEM-uRpQz-fROA',
-              authorChannelId: {
-                value: 'UCywYno-9nvEM-uRpQz-fROA'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'This is very good lol',
-              textOriginal: 'This is very good lol',
-              parentId: 'UgxhF1SNssVOvWVxkUJ4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 1,
-              publishedAt: '2019-10-18T00:10:33.000Z',
-              updatedAt: '2019-10-18T00:10:33.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/yk3n7kF8f_aW8h55jwR_igvxYcI"',
-            id: 'UgxhF1SNssVOvWVxkUJ4AaABAg.905IauHasfV909eReFdOBL',
-            snippet: {
-              authorDisplayName: 'big boom 456',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l78R0eRuYxFO1K3yMhEo6Lb_ulTbMsvMOLIQrA=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UCjHT_4lsxUAnOsw0jDwPqtQ',
-              authorChannelId: {
-                value: 'UCjHT_4lsxUAnOsw0jDwPqtQ'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Hahaha best comment ever xD',
-              textOriginal: 'Hahaha best comment ever xD',
-              parentId: 'UgxhF1SNssVOvWVxkUJ4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 1,
-              publishedAt: '2019-10-16T18:53:09.000Z',
-              updatedAt: '2019-10-16T18:53:21.000Z'
-            }
-          },
-          {
-            kind: 'youtube#comment',
-            etag: '"j6xRRd8dTPVVptg711_CSPADRfg/6V858hMnREZ3H9R97LKnQAsyk2U"',
-            id: 'UgxhF1SNssVOvWVxkUJ4AaABAg.905IauHasfV909GRiG77Pw',
-            snippet: {
-              authorDisplayName: 'poopsyko',
-              authorProfileImageUrl: 'https://yt3.ggpht.com/a/AGF-l7-AiM9IBzbF1Nz9-s_hvt-wPDIQfih5SO2jZw=s48-c-k-c0xffffffff-no-rj-mo',
-              authorChannelUrl: 'http://www.youtube.com/channel/UC0VoD3NdiD_c89JKGvcxnMg',
-              authorChannelId: {
-                value: 'UC0VoD3NdiD_c89JKGvcxnMg'
-              },
-              videoId: '1JLUn2DFW4w',
-              textDisplay: 'Lmfao',
-              textOriginal: 'Lmfao',
-              parentId: 'UgxhF1SNssVOvWVxkUJ4AaABAg',
-              canRate: true,
-              viewerRating: 'none',
-              likeCount: 3,
-              publishedAt: '2019-10-16T15:14:42.000Z',
-              updatedAt: '2019-10-16T15:14:42.000Z'
-            }
           }
         ]
       }
     }
   ],
   videoDetails: {
-    kind: 'youtube#video',
-    etag: '"j6xRRd8dTPVVptg711_CSPADRfg/vwMiMeL9MBM8LZ3mJRdKMoJYSpE"',
     id: '1JLUn2DFW4w',
     snippet: {
       publishedAt: '2019-09-24T14:30:03.000Z',
@@ -1587,26 +797,6 @@ export default {
           url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/default.jpg',
           width: 120,
           height: 90
-        },
-        medium: {
-          url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/mqdefault.jpg',
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/hqdefault.jpg',
-          width: 480,
-          height: 360
-        },
-        standard: {
-          url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/sddefault.jpg',
-          width: 640,
-          height: 480
-        },
-        maxres: {
-          url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/maxresdefault.jpg',
-          width: 1280,
-          height: 720
         }
       },
       channelTitle: 'Netflix',
@@ -1620,12 +810,6 @@ export default {
         'El Camino',
         'ECBBMT924!'
       ],
-      categoryId: '24',
-      liveBroadcastContent: 'none',
-      localized: {
-        title: 'El Camino: A Breaking Bad Movie | Official Trailer | Netflix',
-        description: 'Picking up moments after the series finale of Breaking Bad ends, Aaron Paul is back as Jesse Pinkman in El Camino: A Breaking Bad Movie, directed by Vince Gilligan, on Netflix October 11.\n\nFor limited theatrical event, visit www.elcamino-movie.com for showtimes'
-      },
       defaultAudioLanguage: 'en-US'
     },
     statistics: {
@@ -1637,10 +821,7 @@ export default {
     }
   },
   selectedVideo: {
-    kind: 'youtube#searchResult',
-    etag: '"j6xRRd8dTPVVptg711_CSPADRfg/BzZidK3YWN82e4rV5B27QRdmdBQ"',
     id: {
-      kind: 'youtube#video',
       videoId: '1JLUn2DFW4w'
     },
     snippet: {
@@ -1653,153 +834,79 @@ export default {
           url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/default.jpg',
           width: 120,
           height: 90
-        },
-        medium: {
-          url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/mqdefault.jpg',
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: 'https://i.ytimg.com/vi/1JLUn2DFW4w/hqdefault.jpg',
-          width: 480,
-          height: 360
         }
       },
-      channelTitle: 'Netflix',
-      liveBroadcastContent: 'none'
+      channelTitle: 'Netflix'
     }
   },
   channelInfo: {
-    kind: 'youtube#channel',
-    etag: '"j6xRRd8dTPVVptg711_CSPADRfg/KGyGr2JbV340OalLg7vZuxtdZLc"',
     id: 'UCWOA1ZGywLbqmigxE4Qlvuw',
     statistics: {
       viewCount: '2350770396',
       commentCount: '0',
       subscriberCount: '11700000',
-      hiddenSubscriberCount: false,
       videoCount: '3355'
     }
   },
   viewCount: [
     {
-      kind: 'youtube#video',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/uG8YRCcuFcZIzyqcnc-O2nA2tP4"',
       id: '1JLUn2DFW4w',
       statistics: {
         viewCount: '17284829',
-        likeCount: '460129',
-        dislikeCount: '6267',
-        favoriteCount: '0',
-        commentCount: '36109'
       }
     },
     {
-      kind: 'youtube#video',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/lUsu2w1AJhRs7DlfRd3OR9DH2Pk"',
       id: '1xqwyudGlPU',
       statistics: {
         viewCount: '726534',
-        likeCount: '10572',
-        dislikeCount: '844',
-        favoriteCount: '0',
-        commentCount: '1970'
       }
     },
     {
-      kind: 'youtube#video',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/VTjdIA1blyYveZFtgyPy7bslsNI"',
       id: 'uOwi33Wpmr0',
       statistics: {
-        viewCount: '637823',
-        likeCount: '9792',
-        dislikeCount: '1053',
-        favoriteCount: '0',
-        commentCount: '2197'
+        viewCount: '637823'
       }
     },
     {
-      kind: 'youtube#video',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/OPdnWV0tOtFpHEQSHK3CMM0JHyQ"',
       id: 'iU8SgjZRPxA',
       statistics: {
-        viewCount: '407683',
-        likeCount: '15797',
-        dislikeCount: '158',
-        favoriteCount: '0',
-        commentCount: '1195'
+        viewCount: '407683'
       }
     },
     {
-      kind: 'youtube#video',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/TvJIgF7vjUEgwM4GjtsutK8jfl8"',
       id: 'lZKqMVPlDg8',
       statistics: {
-        viewCount: '9258526',
-        likeCount: '204890',
-        dislikeCount: '3568',
-        favoriteCount: '0',
-        commentCount: '17588'
+        viewCount: '9258526'
       }
     },
     {
-      kind: 'youtube#video',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/6IPq3fCFaXV4CC5Edm8U0PqVSYQ"',
       id: 'FbRL0fWr-08',
       statistics: {
-        viewCount: '68323',
-        likeCount: '2896',
-        dislikeCount: '41',
-        favoriteCount: '0',
-        commentCount: '183'
+        viewCount: '68323'
       }
     },
     {
-      kind: 'youtube#video',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/29nDTC5sIhFX8niPDfYDeWGZFU8"',
       id: 'Yhjs8B_Wxl8',
       statistics: {
-        viewCount: '676704',
-        likeCount: '10381',
-        dislikeCount: '209',
-        favoriteCount: '0',
-        commentCount: '1112'
+        viewCount: '676704'
       }
     },
     {
-      kind: 'youtube#video',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/JhAF5IG7lxL_cSKW2VeB2ILCt4E"',
       id: 'i5YFJiHooXM',
       statistics: {
         viewCount: '196802',
-        likeCount: '2707',
-        dislikeCount: '332',
-        favoriteCount: '0',
-        commentCount: '572'
       }
     },
     {
-      kind: 'youtube#video',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/wiAVbJjmbVI930-qB4RI3a3Nd1M"',
       id: 'CpKN8AVp4BM',
       statistics: {
         viewCount: '227481',
-        likeCount: '4936',
-        dislikeCount: '211',
-        favoriteCount: '0',
-        commentCount: '1127'
       }
     },
     {
-      kind: 'youtube#video',
-      etag: '"j6xRRd8dTPVVptg711_CSPADRfg/Fz9aCVm98Ul4louqeD5bpTXYIME"',
       id: 'Xw7Aii1Fyq4',
       statistics: {
-        viewCount: '3506856',
-        likeCount: '100275',
-        dislikeCount: '728',
-        favoriteCount: '0',
-        commentCount: '8004'
+        viewCount: '3506856'
       }
     }
   ],

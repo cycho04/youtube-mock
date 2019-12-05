@@ -1,11 +1,10 @@
 import React from 'react';
-import Popper from '@material-ui/core/Popper';
-import './SearchBar.scss';
+import PropTypes from 'prop-types';
 import { connect } from "react-redux";
-import { searchTerm, changeColor } from '../../actions';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCheese, faPepperHot, faIceCream, faFish, faAppleAlt, faBone, faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 
+import './SearchBar.scss';
+import ColorPopper from '../ColorPopper/ColorPopper';
+import { searchTerm } from '../../actions';
 
 
 class SearchBar extends React.Component {
@@ -39,44 +38,7 @@ class SearchBar extends React.Component {
                             </div>
                         </div>
 
-                        <Popper open={this.state.popper} popper={this.state.popper} className='popper'>
-                            <FontAwesomeIcon
-                                onClick={() => this.props.changeColor('redBG')} 
-                                className={`icons ${this.props.color === 'redBG' ? 'black' : 'red'}`}
-                                icon={faPepperHot}
-                            />
-                            <FontAwesomeIcon
-                                icon={faIceCream}
-                                onClick={() => this.props.changeColor('purpleBG')} 
-                                className={`icons ${this.props.color === 'purpleBG' ? 'black' : 'purple'}`}
-                            />
-                            <FontAwesomeIcon
-                                icon={faAppleAlt}
-                                onClick={() => this.props.changeColor('greenBG')} 
-                                className={`icons ${this.props.color === 'greenBG' ? 'black' : 'green'}`}
-                            />
-
-                            <FontAwesomeIcon
-                                icon={faCheese} 
-                                onClick={() => this.props.changeColor('yellowBG')} 
-                                className={`icons ${this.props.color === 'yellowBG' ? 'black' : 'yellow'}`}
-                            />
-                            <FontAwesomeIcon
-                                icon={faFish}
-                                onClick={() => this.props.changeColor('blueBG')} 
-                                className={`icons ${this.props.color === 'blueBG' ? 'black' : 'blue'}`}
-                            />
-                            <FontAwesomeIcon
-                                icon={faBone}
-                                onClick={() => this.props.changeColor('grayBG')} 
-                                className={`icons ${this.props.color === 'grayBG' ? 'gray' : 'black'}`}
-                            /> 
-                            <FontAwesomeIcon
-                                icon={faTimesCircle}
-                                onClick={() => this.handleClick()} 
-                                className='icons'
-                            />    
-                        </Popper>
+                        <ColorPopper open={this.state.popper} handleClick={this.handleClick}/>
 
                         <div className='searchSide'>
                             <form onSubmit={this.onFormSubmit} className='ui form'>
@@ -100,16 +62,14 @@ class SearchBar extends React.Component {
 
 const mapStateToProps = state => {
     return{
-        videos: state.videos,
-        videoId: state.selectedVideo.id.videoId,
-        channelId: state.selectedVideo.snippet.channelId,
         color: state.color,
     }
 }
 
-const mapDispatchToProps = {
-    searchTerm,
-    changeColor
+SearchBar.propTypes = {
+    searchTerm: PropTypes.func,
+    color: PropTypes.string,
+
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);            
+export default connect(mapStateToProps, {searchTerm})(SearchBar);            

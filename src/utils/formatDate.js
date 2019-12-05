@@ -1,3 +1,5 @@
+//Formats date into -- Month abbr, date, year -- 
+
 export const formatDate = (rawDate) => {
     const date = new Date(rawDate);
 

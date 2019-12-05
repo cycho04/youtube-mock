@@ -1,18 +1,21 @@
 import React from 'react';
 import ClampLines from 'react-clamp-lines';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+
 import {formatDate} from '../../utils/formatDate';
-
-
 import './Comments.scss';
 
 
 const Comments = props => {
+
+    const {comments, color } = props;
+
     return(
         <div className='ui segment commentss'>
             <div className='ui comments'>
-                {props.comments.map((comment) => {
-
+                {comments.map((comment) => {
+                    //proper data is deeply nested.
                     const data = comment.snippet.topLevelComment.snippet;
                     const fullFormattedDate = formatDate(data.publishedAt);
                     
@@ -22,15 +25,15 @@ const Comments = props => {
                                 <img src={data.authorProfileImageUrl} alt={data.authorDisplayName} />
                             </div>
                             <div className='content'>
-                                <div className={`author ${props.color}`}>
+                                <div className={`author ${color} details-text`}>
                                     {data.authorDisplayName}
                                     <span className='metadata'>
-                                        <span className={`date ${props.color}`}>
+                                        <span className={`date ${color} details-text`}>
                                             {fullFormattedDate}
                                         </span>
                                     </span>
                                 </div> 
-                                <div className={`text ${props.color}`}>
+                                <div className={`text ${color}`}>
                                     <ClampLines
                                         text={data.textOriginal}  
                                         lines='4'
@@ -38,7 +41,7 @@ const Comments = props => {
                                     />
                                 </div>
                                 <div className='actions'>
-                                    <div className={`spacing ${props.color}`}>
+                                    <div className={`spacing ${color} details-text`}>
                                         <i className='thumbs up icon'/> {data.likeCount || ''} <i className='thumbs down icon'/>
                                         <span>REPLY</span>
                                     </div>
@@ -58,6 +61,11 @@ const mapStateToProps = state => {
         comments: state.comments,
         color: state.color,
     }
+}
+
+Comments.propTypes = {
+    color: PropTypes.string,
+    comments: PropTypes.array.isRequired,
 }
 
 export default connect(mapStateToProps)(Comments);
